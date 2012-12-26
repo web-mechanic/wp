@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible"<?php wp_enqueue_style('nom_pour_appeler_la_feuille'); ?>>
         <title>Portfolio de Thomas Lissens</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
         <meta name="google-site-verification" content="aY0z0xRiNnhDw0UGfKwhV1-JwuuKq_lq9q2i21GwXXY" /> 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@
         <h1 class="hiddentitle">portfolio de Thomas Lissens</h1>
             <section>
                 <h1 class="hiddentitle">Header</h1>
-                        <header id="Warptop">
+                        <header class="Warptop">
                             <h2 class="hiddentitle">Logo du site</h2>  
                                 <a class="loga"  href="http://ptfwp.dreamdesgn.com/home/"><img id="logo" src="http://ptfwp.dreamdesgn.com/wp-content/uploads/2012/10/logo.png" width="360" height="64" title="Web Mechanic logo" alt="Web Mechanic"></a>
                         <nav class="first">
@@ -32,12 +32,6 @@
                         </nav>
                     </header>
             </section>
-            <section>
-                <h1 class="hiddentitle">Fil d'arianne</h1>
-                <?php if (function_exists('mybread')) mybread();?>
-            </section>
-
-
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
