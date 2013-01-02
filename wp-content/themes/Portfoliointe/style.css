@@ -783,11 +783,12 @@ navptf a:hover {
 }
 .readMore {
   padding: 1em;
-  background-color: rgba(0, 204, 204, 0.6);
+  background-color: #69d2e7;
   border-radius: 10px;
   border: none;
   float: right;
   margin-bottom: 2.5em;
+  color: white;
 }
 .readMore:hover {
   padding: 1em;

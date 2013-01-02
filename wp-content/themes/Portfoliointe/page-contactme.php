@@ -3,19 +3,40 @@
    <section class="contentwrap" id="cont">
 
 <section id="wrapform">
-	
-	<form action="#" method="post">
+	<?php 
+                        $erreurNom = $_SESSION['emptyNom']; 
+                        $erreurEmail = $_SESSION['errorMail'];
+                        $erreurMessage = $_SESSION['emptyTexte'];
+                        session_destroy();
+                    ?>
+	<form action="<?php bloginfo('template_directory'); ?>/contactForm.php" method="post">
 		<fieldset id="fieldcontact">
 			<label for="name">Name:</label>
 			<input type="text" id="name" placeholder="Jeremy Leblond" />
+
+			  <?php if(isset($erreurNom)): ?>
+                                <p class="errors"><?php echo($erreurNom);?></p>
+                            <?php endif; ?>
 			
 			<label for="email">Email:</label>
 			<input type="email" id="email" placeholder="email@yourprovider.com" />
+
+			<?php if(isset($erreurEmail)): ?>
+                                <p class="errors"><?php echo($erreurEmail);?></p>
+                            <?php endif; ?>
 			
 			<label for="message">Message:</label>
 			<textarea id="message" placeholder="What's on your mind?"></textarea>
+
+			 <?php if(isset($erreurMessage)): ?>
+                            <div>
+                                <p class="errors"><?php echo($erreurMessage);?></p>
+                            </div>
+                            <?php endif; ?>
 			
                         <input id="sending" type="submit" value="Send message" />
+
+
 			
 		</fieldset>
 	</form>
