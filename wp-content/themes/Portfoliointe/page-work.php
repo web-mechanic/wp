@@ -2,44 +2,35 @@
  remove_filter('the_excerpt','wpautop');
 get_header();
 ?>
- <section class="contentwrap" >
-
-            <section class="leftblog">
-
-                <section class="domaine">
-
-                         <h2 class="choose"> <span class="dotOrange">.</span> What do you want to see? </h2>
-                    <span class="workclass"> <?php wp_tag_cloud( array( 'taxonomy'=> 'techniques', 'format'=>'list' ) );?> </span>
-                   
-                </section>
-
+<section class="contentwrap" >
+  <div class="leftblog">
+    <section class="domaine">
+      <h2 class="choose"> <span class="dotOrange">.</span> Quel domaine vous intéresse? </h2>
+        <div class="workclass"> <?php wp_tag_cloud( array( 'taxonomy'=> 'techniques', 'format'=>'list' ) );?> </div>
+     </section>
                 
 <?php $args = array( 'post_type' => 'works', 'posts_per_page' => 7 );
 $loop = new WP_Query( $args );
 if($loop->have_posts()):
 while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
+<article class="articles">
+  <header >
+    <hgroup>
+    <h3 class="titleblog"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h3>
+    <h3 class="artinfo"> <span class="author" ><?php the_author(); ?></span> 
+      <span class="dateArticle">Publié le <?php the_time('d-m Y'); ?> <span class="dotOrange">- </span> <?php the_time('G:i'); ?></span> 
+    </h3>
+    </hgroup>
+  </header>
+    <div class="contentwork">
 
-
-
-
-                <article class="articles">                   
-
-
-                    <header >
-                        <h2 class="titleblog"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h2>
-                        <h3 class="artinfo"> <span class="author" ><?php the_author(); ?></span> 
-                            <span class="dateArticle">Publié le <time><?php the_time('d-m Y'); ?> <span class="dotOrange">- </span> <?php the_time('G:i'); ?></time></span> 
-                        </h3>
-                    </header>
-
-                    <section class="contentwork">
-                         <?php the_post_thumbnail('Blogimg'); ?>
+    <?php the_post_thumbnail('Blogimg'); ?>
 
                         <p>
  <?php the_excerpt();?>
                         </p>
-                    </section>
+      </div>
 
                     <footer>
                        <span class="comment"><a href="#">Commenter</a> | <a href="#">0 Commentaires</a></span> 
@@ -54,20 +45,17 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     
               
               
-            </section>
+            </div>
 
-            <section class="rightblog">
+            <div class="rightblog">
 
                 <section class="search">
                     
-                    <form action="#" method="get">
+                    
                         <h2> <span class="dotOrange">.</span>Search</h2>
                         <?php get_search_form(); ?>
 <!-- <input class="blogsearch" type="text" placeholder="Typography" >
 <input class="sendingbut" type="submit" value="Go!" /> -->
-                    </form>
-
-
                     
                 </section>
 
@@ -98,13 +86,14 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <section class="advertisement">
                          <h2> <span class="dotOrange">.</span> advertisement </h2>
                          <ul class="sponslist">
-                             <li> <a href="#"> <img src="../img/sponsor.png" width="275" height="275"></a> </li>
-                              <li> <a href="#"> <img src="../img/sponsor.png" width="275" height="275"></a> </li>
-                               <li> <a href="#"> <img src="../img/sponsor.png" width="275" height="275"></a> </li>
+                             <li> <a href="#"> <img src="../img/sponsor.png" alt="Liens publicitaire du sponsor X" width="275" height="275"></a> </li>
+                              <li> <a href="#"> <img src="../img/sponsor.png" alt="Liens publicitaire du sponsor X" width="275" height="275"></a> </li>
+                               <li> <a href="#"> <img src="../img/sponsor.png" alt="Liens publicitaire du sponsor X" width="275" height="275"></a> </li>
                          </ul>
                 </section>
-            </section>
-        </section>
+            </div>
+          </section>
+       
 
         <?php
             get_footer();?>

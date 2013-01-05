@@ -5,11 +5,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-</body>
+
     <head>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" >
-        <meta charset=<?php bloginfo('charset'); ?>
-        <meta http-equiv="X-UA-Compatible"<?php wp_enqueue_style('nom_pour_appeler_la_feuille'); ?>>
+        <meta charset="<?php bloginfo('charset'); ?>">
         <title>Portfolio de Thomas Lissens</title>
         <meta name="description" content="">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">

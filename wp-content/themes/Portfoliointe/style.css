@@ -1,26 +1,11 @@
 /*
-
 Theme Name: Web Mechanic Portfolio
-
-
-
 Author: Thomas Lissens
-
-
-
 Description: A theme designed by me
-
 License: GNU General Public License v2 or later
-
-
-
 Tags:nice
-
-
-
 */
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
-
 -------------------------------------------------------------- */
 html,
 body,
@@ -141,19 +126,29 @@ section {
   display: block;
 }
 /***********************Less**************************/
-/***********************STARTING CUSTOM STYLE**************************/
+/***********************GENERAL STYLE**************************/
 .hiddentitle {
   display: none;
 }
+a {
+  text-decoration: none;
+  color: #666666;
+}
+.dotOrange {
+  color: #f15a24;
+  text-shadow: 1px 1px 0px #eee;
+  line-height: 1.3em;
+}
+/***********************STARTING CUSTOM STYLE**************************/
 html {
   margin-top: 0px;
 }
-BODY {
+body {
   background-image: url('img/bckg.png');
   background-repeat: repeat;
   font-family: "helvetica", "Open Sans", sans-serif;
   line-height: 1.5em;
-  font-size: 16.4px  ;
+  font-size: 16.4px;
   letter-spacing: 0.04em;
   margin: 0;
   padding: 0;
@@ -190,19 +185,19 @@ h2 {
   margin-top: 2.1em;
   margin-right: 2.1em;
 }
-.first LI {
+.first li {
   display: inline-block;
   font-weight: 700;
   font-family: "rockwell", "Arvo", serif;
   font-size: 1.55em;
 }
-.first A {
+.first li a {
   text-decoration: none;
   color: #e5e5e5;
   margin-right: 2.33em;
   padding: 0.5em;
 }
-.first A:hover {
+.first li a:hover {
   border-bottom: 1px dashed;
   border-color: #f15a24;
 }
@@ -230,11 +225,11 @@ a {
   width: 17em;
   padding-top: 2.5em;
 }
-.search h2 {
-  margin-top: 0em;
-}
 .rightblog h2 {
   margin-top: 1em;
+}
+.search h2 {
+  margin-top: 0em;
 }
 /*Accroche*/
 #accroche {
@@ -248,11 +243,6 @@ a {
   margin: 0 auto;
   margin-top: 0.5em;
 }
-.dotOrange {
-  color: #f15a24;
-  text-shadow: 1px 1px 0px #eee;
-  line-height: 1.3em;
-}
 .large {
   font-size: 1.6em;
   line-height: 1.2em;
@@ -260,15 +250,15 @@ a {
   text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
 }
 /*Social Links*/
-#sociallinks {
+.sociallinks {
   display: inline;
   padding-right: 50%;
 }
-#sociallinks ul {
+.sociallinks ul {
   text-align: center;
   margin: 2.5em 1.5em 0 1.5em;
 }
-#sociallinks LI {
+.sociallinks li {
   display: inline-block;
   font-weight: 700;
   font-size: 1.30em;
@@ -278,6 +268,14 @@ a {
   height: 75px;
   background-repeat: no-repeat;
   margin: 0.7em;
+}
+.sociallinks a {
+  display: block;
+  height: 75px;
+  height: 75px;
+}
+.sociallinks a:hover {
+  border: none;
 }
 .ic_linkedin {
   background-position: 0 -154.97000122070312px;
@@ -294,14 +292,6 @@ a {
   border-radius: 50px;
   box-shadow: 1px 1px 0px #eee, 3px 3px 0px #707070;
   text-decoration: none;
-  border: none;
-}
-#sociallinks a {
-  display: block;
-  height: 75px;
-  height: 75px;
-}
-#sociallinks a:hover {
   border: none;
 }
 /*Slider*/
@@ -408,8 +398,8 @@ a {
   margin-top: 1.5em;
 }
 .articontent img {
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: auto;
   float: left;
   margin-right: 1.4em;
   box-shadow: 0 5px 10px #777;
@@ -432,37 +422,18 @@ a {
   padding-top: 1.5em;
 }
 /*.lastArticles img:hover+p{
-
     color:#E5E5E5;
-
     z-index: 2;
-
     background-color:rgba(150,150,150,0.9);
-
     position:relative;
-
     top: -5.35em;
-
     padding:0.5em 0.5em 0.5em 0.5em ;
-
     visibility:visible;
-
-
-
 }
-
-
 
 .lastArticles p:hover{
-
     visibility: visible;
-
-
-
 }
-
-
-
 */
 .lastArticles {
   clear: both;
@@ -471,14 +442,12 @@ a {
   width: 100%;
   margin-right: 0.8em;
   margin-left: 0.8em;
-  /*provisoire*/
-
 }
 .lastArticles section:first-of-type {
   margin-left: 0;
 }
-.lastArticles section:last-of-type {
-  margin-right: 0;
+.lastArticles section:last-child {
+  margin-left: 0;
 }
 /*sitemap*/
 .footwrap {
@@ -507,21 +476,21 @@ a {
   padding-left: 0;
   margin-top: -0.45em;
 }
-.altnav LI {
+.altnav ul li {
   font-weight: 700;
   font-family: "rockwell", "Arvo", serif;
   font-size: 1.5em;
   line-height: 1.6em;
 }
-.altnav A {
+.altnav ul li a {
   text-decoration: none;
   color: #e5e5e5;
 }
-.altnav A:hover {
+.altnav ul li a:hover {
   border-bottom: 1px dashed;
   border-color: #f15a24;
 }
-.altnav A:active {
+.altnav.altnav.altnav A:active {
   border-bottom: 1px dashed;
   color: #f15a24;
 }
@@ -908,7 +877,7 @@ navptf a:hover {
   background-position: 0 -173.97698974609375px;
   text-indent: -1000em;
 }
-.workclass li:last-of-type {
+.workclass li:last-child {
   background-position: 0 -86.96697998046875px;
   text-indent: -1000em;
 }
@@ -921,6 +890,9 @@ navptf a:hover {
   box-shadow: 1px 1px 0px #eee, 3px 3px 0px #707070;
   text-decoration: none;
   border: none;
+}
+.commentSpace {
+  clear: both;
 }
 /********************************Media Queries***********************************/
 /* Smartphones (portrait and landscape) ----------- */

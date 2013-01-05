@@ -8,7 +8,7 @@
                <header>
                    <hgroup>
                <h2 class="titleblog"><?php the_title(); ?></h2>
-               <h3 class="artinfo"><span class="author"><?php the_author(); ?></span> <span class="dateArticle">Publié le <time><?php the_time('d-m Y'); ?><span class="dotOrange">- </span> <?php the_time('G:i'); ?></time></span> </h3>
+               <h3 class="artinfo"><span class="author"><?php the_author(); ?></span> <span class="dateArticle">Publié le <?php the_time('d-m-Y'); ?> <span class="dotOrange">- </span> <?php the_time('G:i'); ?></span> </h3>
                    </hgroup>
                </header>
                

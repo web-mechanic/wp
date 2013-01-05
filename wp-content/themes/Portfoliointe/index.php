@@ -19,9 +19,9 @@
     </section>
 
     <section id="jflowperso">
-            <h1 class="hiddentitle">Slider de présentation des derniers travaux</h1>
-        <div id="sliderContainer">
-            <div id="mySlides">
+        <h1 class="hiddentitle">Slider de présentation des derniers travaux</h1>
+            <div id="sliderContainer">
+                <div id="mySlides">
                 <?php
                 $loop = new WP_query(array('post_type'=>'slider'));                    
                 if($loop->have_posts()):
@@ -50,7 +50,7 @@
             <div class="jFlowNext"></div>
         </div>        
     </section>
-    <section id="sociallinks">
+    <section class="sociallinks">
         <h1 class="hiddentitle">Liens vers les réseaux sociaux</h1>
         <ul>
             <?php
@@ -72,18 +72,19 @@
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <section class=" lastArticles">
+            <h1 class="hiddentitle">Les derniers articles</h1>
             <article>
                 <hgroup>
                     <h2 class="arttitle"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h2>
                     <h3 class="artinfo"> <span class="author"> <?php the_author(); ?> </span> 
-                    <span class="dateArticle">Publié le <time><?php the_time('d-m Y'); ?></span>
-                    <span class="dotOrange">- </span> <?php the_time('G:i'); ?></time></span>
+                    <span class="dateArticle">Publié le <?php the_time('d-m-Y'); ?></span>
+                     <span><?php the_time('G:i'); ?></span>
                     </h3>
                 </hgroup>
-                <section class="articontent">
+                <div class="articontent">
                     <?php the_post_thumbnail('featured'); ?>
                     <p class="txtart"><?php the_excerpt(); ?></p>       
-                </section>
+                </div>
             </article>         
         </section>
     <?php endwhile; ?>

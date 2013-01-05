@@ -97,7 +97,7 @@ if(!function_exists('create_post_type')){
                         'name' => __('works'),
                         
                         ),
-                    'supports' => array('title','editor','thumbnail','post-formats'),
+                    'supports' => array('title','editor','thumbnail','post-formats','excerpt'),
                     'public' => true, 
                     'has_archive' => true,
 
@@ -174,7 +174,7 @@ if(!function_exists('create_post_type')){
 
    function excerpt_read_more_link($output) {
  global $post;
- return $output . '<section class="moresec"> <a class=readMore href="'. get_permalink($post->ID) . '">Read more</a> </section>';
+ return $output . '<div class="moresec"> <a class=readMore href="'. get_permalink($post->ID) . '">Read more</a> </div>';
 }
 if(! function_exists('build_taxonomies')){
 function build_taxonomies(){
