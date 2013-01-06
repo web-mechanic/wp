@@ -50,7 +50,7 @@
 </section>
 
 
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+                                    
 
                                     <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/vendor/jquery-1.8.1.js"></script>
 

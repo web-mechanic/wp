@@ -30,13 +30,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <p>
  <?php the_excerpt();?>
                         </p>
-      </div>
-
-                    <footer>
-                       <span class="comment"><a href="#">Commenter</a> | <a href="#">0 Commentaires</a></span> 
-                    </footer>
-
-   
+      </div>                    
                 </article> 
 
 

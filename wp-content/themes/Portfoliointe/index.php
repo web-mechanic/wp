@@ -82,7 +82,9 @@
                     </h3>
                 </hgroup>
                 <div class="articontent">
+                    
                     <?php the_post_thumbnail('featured'); ?>
+                  
                     <p class="txtart"><?php the_excerpt(); ?></p>       
                 </div>
             </article>         

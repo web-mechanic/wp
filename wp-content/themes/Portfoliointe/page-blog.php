@@ -26,9 +26,9 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                             <?php the_excerpt();?>
                         </p>
                     </section>
-
+         
                     <footer>
-                       <span class="comment"><a href="#">Commenter</a> | <a href="#">0 Commentaires</a></span> 
+                       <span class="comment"><a href="#">Commenter</a> | <a href="#"><?php comments_number('0 commentaire','1 commentaire', '% commentaires');?></a></span> 
                        <a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php echo urlencode(get_the_title($id)); ?>" title="Share this post on Facebook">Share on Facebook</a>
                     </footer>
 

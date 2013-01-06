@@ -7,8 +7,16 @@
 
 
 
+
+
  <section class="contentwrap" >
             <section class="leftblog">
+
+   <section class="domaine">
+      <h2 class="choose"> <span class="dotOrange">.</span> Quel domaine vous intéresse? </h2>
+        <div class="workclass"> <?php wp_tag_cloud( array( 'taxonomy'=> 'techniques', 'format'=>'list' ) );?> </div>
+     </section>
+     
     <?php
         if(have_posts()):
         while(have_posts()):

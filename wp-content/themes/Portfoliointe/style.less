@@ -71,6 +71,7 @@ footer, header, hgroup, menu, nav, section {
 
 /***********************Less**************************/
 @orange:rgb(241, 90, 36);
+@greyTitle:#666;
 @buttonBlue:#69D2E7;
 /***********************GENERAL STYLE**************************/
 .hiddentitle{
@@ -97,7 +98,7 @@ body{
     background-image: url('img/bckg.png');
     background-repeat: repeat;
     font-family: "helvetica", "Open Sans", sans-serif;
-    line-height: 1.5em;
+    line-height: 1.4em;
     font-size: 16.4px;
     letter-spacing: 0.04em;
     margin: 0;
@@ -118,6 +119,7 @@ h2{
 .arttitle{
  margin-bottom: 22px;
  margin-top: 1em;
+ color: @greyTitle;
 }
 
 .loga:hover{
@@ -143,7 +145,7 @@ h2{
     margin-right: 2.1em;
 
     li{
-        display: inline-block;
+        display: inline;
         font-weight: 700;    
         font-family: "rockwell","Arvo", serif;
         font-size: 1.55em;
@@ -224,9 +226,6 @@ a{
 /*Social Links*/
 
 .sociallinks{
-    display: inline;
-    padding-right: 50%;
-
     ul{
         text-align: center;
         margin: 2.5em 1.5em 0 1.5em;
@@ -241,7 +240,7 @@ a{
         width: 75px;
         height: 75px;
         background-repeat: no-repeat;
-        margin:0.7em; 
+        margin:0 0.35em 0 0.35em
     }
 
     a{
@@ -256,7 +255,7 @@ a{
 }
 
 .ic_linkedin{
-    background-position:  0 -154.97000122070312px;
+    background-position: 0 -158.98199462890625px ;
 }
 
 .ic_facebook{
@@ -264,7 +263,7 @@ a{
 }
 
 .ic_twitter{
-    background-position: 0 -75.97799682617188px;
+    background-position: 0 -78.98199462890625px ;
 }
 
 .ic_linkedin:hover, .ic_facebook:hover, .ic_twitter:hover{
@@ -275,7 +274,7 @@ a{
 }
 /*Slider*/
 #sliderContainer { width: 940px; height: 300px; position: relative; margin: 0 auto; margin-top: 1.5em; box-shadow:0 2px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
-.slideContent {  background:url("img/slider/contentBg.png") repeat scroll 0 0 transparent; position: absolute; bottom:0px; right:0px; padding: 10px; width: 920px; }
+.slideContent {  background:url("img/slider/contentBg.png") repeat scroll 0 0 rgba(0, 0, 0, 0.75); position: absolute; bottom:0px; right:0px; padding: 10px; width: 920px; }
 .slide h2 {  font-family:  "rockwell","Arvo", serif; color: #FFF;  margin: 0 0 5px 0; font-size: 1.2em; }
 .slide p { font-size: 14px; color: #FFF; margin: 0; }
 .jFlowSlideContainer { overflow: hidden; }
@@ -311,19 +310,19 @@ a{
    margin-top: 1.5em;
 
    img{
-        width:220px;
+        width:300px;
         height:auto;
         float:left;
-        margin-right: 1.4em;
+        margin: 0 1.4em 0.7em 0;
         box-shadow: 0 5px 10px #777;
    }
 }
 
 .hereisthearticle img{
-    width:313px;
-    height:313px;
+    width:100%;
+    height:auto;
     float:left;
-    margin-right: 1.4em;
+    margin: 0 0 1em 0;
 }
 
 .contentart img{
@@ -333,12 +332,15 @@ a{
 
 .contentwork{ 
     img{
-    box-shadow: 0 5px 10px #777;
+        box-shadow: 0 5px 10px #777;
 }
     p{
-    clear:both;
-    padding-top: 1.5em;
+        clear:both;
+        padding-top: 1.5em;
 }
+    .readMore{
+        margin: 0;
+    }
 }
 
 /*.lastArticles img:hover+p{
@@ -358,6 +360,7 @@ a{
 
 .lastArticles{
     clear:both;  
+
         section{
             width: 100%;
             margin-right: 0.8em;
@@ -368,8 +371,32 @@ a{
          &:last-child{
             margin-left: 0;
         }
-}  
+    }
+
+    img
+    {
+opacity: 0.3;/* l'opacite que vous voulez au depart */
+    border: none;/* enlever les border d'une image en lien */
+   
+
+    -webkit-transition: opacity 0.5s ease-in-out;/* transition pour Chrome et Safari */
+    -moz-transition: opacity 0.5s ease-in-out;/* transition pour Firefox */
+    -o-transition: opacity 0.5s ease-in-out;/* transition pour Opéra */
+    transition: opacity 0.5s ease-in-out; /* on écrit cette ligne à la fin de façon à ce que ce soit elle qui soit prise en compte lorsque l'attribut transition sera pris en compte par tous les navigateurs */
+
+
+    }
+
+    &:hover img{
+       opacity: 0.9; /* opacite au survol */
+  
+
+    }
+
+
 }
+
+
 
 /*sitemap*/
 
@@ -422,108 +449,38 @@ a{
     }
 }
 
-
-.altnav 
-
-
-
-.altnav 
-
-
-
-.altnav A:active{
-
-    border-bottom: 1px dashed;
-
-    color: rgb(241, 90, 36);
-
-}
-
-
-
-
-
 .vcard{
-
     font-size: 1em;
-
     color: rgb(229, 229, 229);
 
+    a{
+        text-decoration: none;
+        color: rgb(229, 229, 229);
+        margin-right:3em;
 
-
+        &:hover{
+            border-bottom: 1px dashed;
+            border-color: rgb(241, 90, 36);
+                }
+    }
 }
-
-
-
-.vcard A{
-
-    text-decoration: none;
-
-    color: rgb(229, 229, 229);
-
-    margin-right:3em;
-
-}
-
-
-
-.vcard A:hover{
-
-    border-bottom: 1px dashed;
-
-    border-color: rgb(241, 90, 36);
-
-}
-
-
 
 .tel{
-
     margin-bottom: 1em;
-
 }
-
-
-
-
 
 .hfooter{
-
     color: #E5E5E5;
-
     margin-bottom: 0.5em;
-
 }
-
-
-
-
-
-#foot{
-
-    border: none;
-
-    margin-top: -1em;
-
-}
-
-
 
 .footform h2{
-
     margin-bottom: 1em;
-
 }
-
-
 
 #foot #sent{
-
     margin-top: 1.6em;
-
 }
-
-
 
 #foot #nom{
 
@@ -531,543 +488,267 @@ a{
 
 }
 
-
-
 #foot #e-mail,#foot #nom{
-
-
-
- 
-
     width:10em;
-
-
-
     margin: 0.3em 0.2em 0 0;
-
     text-shadow:1px 1px 0 0 ;
-
     border-radius: 5px 5px 5px 5px;
-
     font-family: 'Open Sans',sans-serif;
-
     padding: 0.3em;
-
-
-
-
-
 }
-
-
 
 #foot .email, #foot .name{
-
    color: #E5E5E5;
-
 }
-
-
 
 #foot #nom{
-
-    
-
     margin-bottom: 1em;
-
 }
-
-
 
 #sent{
-
     background-color: rgba(112, 112, 112, 0.4);
-
     border: medium none;
-
     border-radius: 5px 5px 5px 5px;
-
     clear: both;
-
     color: #FFFFFF;
-
     display: inline;
-
     float: right;
-
     font-family: 'Rockwell',sans-serif;
-
     font-size: 1.2em;
-
     font-weight: 700;
-
     margin: -2.3em -0.3em 0 2em;
-
     padding: 0.6em;
-
     text-align: center;
-
 }
-
-
 
 #sent:hover{
-
     color:rgb(241,90,36);
-
 }
-
-
 
 .tweetfeed{
-
     margin-bottom:3em;
-
     margin-bottom: 3em;
-
 }
-
-
 
 .tweetfeed p{
-
     font-family: "helvetica", "Open Sans", sans-serif;
-
     color: #E5E5E5;
-
 }
-
-
 
 #pubdate{
-
     float:right;
-
     color: #E5E5E5;
-
     font-family: "rockwell Std Normal","Arvo", serif;
-
     font-weight: 400;
-
     line-height: 1.1em;
-
     font-size: 1em;
-
 }
-
-
 
 #portitle{
-
     width:57.317em;
-
     margin: 0 auto;
-
-
-
     margin-top: 1em;
-
 }
-
-
 
 #navptf {
-
     width:57.317em;
-
     margin: 0 auto 2.5em;
-
     list-style-type: none;
-
     padding-left: 0em;
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
 
 #navptf li{
-
-
-
-
-
-
-
     display:inline;
-
     margin-right: 0.5em;
-
-
-
-
-
-
-
 }
 
-
-
-
-
 #navptf a{
-
     font-family: "rockwell","Arvo", serif;
-
     font-weight: 700;
-
     font-size: 1.5em;
-
     list-style-type: none;
-
     color: black;
-
     text-decoration: none;
-
-
-
-
-
-
-
-
-
 }
 
 #navptf a:hover{
-
     opacity: 0.4;
-
-
-
 }
-
-
 
 #navptf img{
-
     margin-top: 1.5em;
-
 }
-
-
-
-
 
 #wrapform{
-
-
-
     margin:2.5em 0em 2.5em 0em;
-
 }
-
-
 
 #wrapform form {
-
     float: left;
-
     width: 62%;
-
 }
-
-
 
 #fieldcontact{
-
     background-color: rgba(112, 112, 112, 0.2);
-
     padding: 2em 2.5em 2em 2em;
-
     max-width: 25em;
-
     max-height: 95%;
-
     border-radius:5px;
-
 }
-
-
 
 #wrapform label{
-
     display: block;
-
     width:10em;
-
     float:left;
-
     clear:left;
-
     margin: 1.5em 1em 0 0;
-
     font-weight: 700;
-
     color: #707070;
-
     text-shadow:1px 1px 0 0 ;
-
 }
-
-
 
 #wrapform #email, #wrapform #name{
-
     display: block;
-
     width: 16em;
-
     height: 1.5em;
-
     margin: 1em 0em 0 0;
-
     border-radius:5px;
-
-  
-
 }
-
-
-
-
 
 #wrapform textArea{
-
     min-width: 97%;
-
     max-width:100%;
-
     height:10em;
-
     margin: 0.3em 0em 0 0;
-
     border:2px inset;
-
     border-radius:5px;
-
 }
-
-
 
 #sending{
-
     float:right;
-
     display:inline;
-
     margin: 2em -0.3em 0em 0em;
-
     clear:both;
-
     margin-left: 2em;
-
     text-align: center;
-
     background-color: rgba(112, 112, 112, 0.4);
-
     border:none;
-
     color:#FFFFFF;
-
     font-family: 'Rockwell', sans-serif;
-
     font-weight: 700;
-
     font-size: 1.3em;
-
     border-radius:5px;
-
     padding: 1em;
-
 }
 
-
-
-
-
-
-
-#wrapform #name,#wrapform #email,#wrapform #message{
-
+input{
     padding:0.5em;
-
     font-family: 'Open Sans', sans-serif;
-
      color: #E5E5E5;
-
-
-
+     display: block;
+width: 16em;
+height: 1.5em;
+margin: 1em 0em 0 0;
+border-radius: 5px;
 }
-
-
-
-
-
-
 
 #sending:hover{
-
     color:rgb(241,90,36);
-
 }
-
-
 
 #map{
-
     width:38%;
-
-
-
     float:left;
-
 }
-
-
-
-
 
 /*work*/
 
-
-
 navptf a{
-
     opacity: 1;
-
 }
-
-
 
 navptf a:hover{
 
-
-
     opacity: .5;
-
     transition: transform 1000ms ease-out 40ms ;
-
-
-
-
-
 }
-
-
 
 .tagclass li{
 
+
+    a{
     background:rgba(241,90,36, 0.6);
-
-    padding:0.4em 0.7em 0.4em 0.4em;
-
+    padding:0.75em 1em 0.75em 0.7em;
     border-radius: 10px 20px 20px 10px;
-
     line-height: 2.5em;
-
     display: inline;
+    color:white;
 
-}
-
-
-
-.tagclass li:hover{
-
-
-
+    &:hover{
     background:rgba(241,90,36, 1);
-
-    padding:0.4em 0.7em 0.4em 0.4em;
-
     border-radius: 10px 20px 20px 10px;
-
     line-height: 2.5em;
+}
+
+    }
+
 
 }
 
+.tag{
+    h2{
+        margin-bottom: 0.35em;
+    }
+}
 
 
 .aarticle{
-
     color: black;
-
-    
-
 }
-
-
 
 .aarticle:hover{
-
     opacity:0.7;
-
-    
-
 }
-
-
 
 .articles{
-
     width:100%;
-
     margin-bottom:1.3em;
 
-
-
+    img{
+        width: 35em;
+        height: auto;
+        clear: both;
+        margin: 1em 0 1em 0;
+    }
 }
 
+    .titleblog{
+    margin-bottom:0.5em;
+    line-height: 1em;
+    clear: both;
+    font-family: "rockwell","Arvo",serif;
+    font-size: 2em;
+    color: @greyTitle;
+    
+    }
 
 
 .articles footer{
-
-
-
     height:5em;
-
     border-bottom: 1px dashed #F15A24;
-
 }
 
 .artinfo{
-
     font-family: 'Helvetica LT', 'Open Sans', sans-serif;
-
     font-weight: 400; 
-
     text-align: right;
-
 }
-
-.titleblog{
-    margin-bottom:1em;
-    line-height: 1em;
-}
-
-.dateArticle{
-    font-size:0.7em;
-    float:right;
-}
-
-
 
 .author{
     float: left;
     font-family: "helvetica", "Open Sans", sans-serif;
     font-weight:700;
 }
-
-
 
 .author:hover{
     opacity:0.7;
@@ -1081,395 +762,182 @@ navptf a:hover{
 }
 
 .contentart img{
-
     float:left;
-
     box-shadow: 0 5px 10px #777;
-
     transform: rotate(3deg);
-
 }
-
-
 
 .moresec{
-
-    margin-top: 2.5em;
-
+    margin-top: 1.5em;
     clear:both;
-
- 
-
 }
-
-
 
 .moresec p{
-
-
-
     padding-top: 1em;
-
-
-
 }
-
-
 
 .readMore{
-
     padding:1em;
-
     background-color: @buttonBlue;
-
     border-radius: 10px;
-
     border: none;
-
     float:right;
-
     margin-bottom: 2.5em;
     color:white;
+    clear: both;
 
-
-
-}
-
-
-
-.readMore:hover{
-
-    padding:1em;
-
+    &:hover{
     background-color: rgba(0, 204, 204, 1);
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    border:none;
-
 }
-
-
+}
 
 .attachment-post-thumbnailwp-post-image{
-
-
-
     float:left;
-
 }
-
-
 
 .comment{
-
-margin-top: 16px;
-
-float: left;
-
-margin-bottom: 1.5em;
-
+    margin-top: 16px;
+    float: left;
+    margin-bottom: 1.5em;
 }
-
-
 
 .singleblogart{
-
-
-
     margin-bottom:4.5em;
-
 }
-
-
 
 .sendingbut{
-
-
-
     float:right;
-
     display:inline;
-
     margin: -0.4em -0.3em 0em 0em;
-
     clear:both;
-
     margin-left: 2em;
-
     text-align: center;
-
     background-color: rgba(112, 112, 112, 0.4);
-
     border:none;
-
     color:#FFFFFF;
-
     font-family: 'Rockwell', sans-serif;
-
     font-weight: 700;
-
     font-size: 1.3em;
-
     border-radius:5px;
-
     padding: 0.6em;
-
-
-
 }
-
-
 
 .sendingbut:hover{
-
      color:rgb(241,90,36);
-
 }
-
-
 
 .blogsearch{
-
-    
-
     padding:0.5em;
-
     font-family: 'Open Sans', sans-serif;
-
     border-radius: 5px;
-
-    
-
 }
-
-
 
 .socialblog{
-
     list-style-type: none;
-
-padding-left: 0px;
-
-
-
-
-
+    padding-left: 0px;
 }
-
-
 
 .socialblog li{
-
     background-image: url('img/spritessoc.png');
-
     width: 75px;
-
     height: 75.sopx;
-
     background-repeat: no-repeat;
-
     margin-bottom: 1em;
-
-
-
-
-
 }
-
-
 
 .socialblog li:hover{
-
     border-radius:50px;
-
     box-shadow: 1px 1px 0px #eee, 3px 3px 0px #707070;
-
-     text-decoration: none;
-
-
-
+    text-decoration: none;
 }
-
-
 
 .socialblog a{
-
-
-
     display: block;
-
     height: 75px;
-
     height:75px;
-
 }
-
-
-
-
 
 .sponslist{
-
     list-style-type: none;
-
     padding-left: 0px;
-
-    
-
 }
-
-
 
 .sponslist a:hover{
-
     border:none;
-
     text-decoration: none;
-
-    
-
 }
-
-
 
 .sponslist img:hover{
-
     box-shadow: 2px 2px 0px #eee;
-
-    
-
 }
-
-
 
 .sponslist li{
-
     margin-bottom: 1.7em;
-
 }
-
-
-
-.artpage{
-
-    padding-top: 2.5em;
-
-}
-
 
 
 .artpage, .hereisthearticle{
-
     width:45em;
-
-    
-
-    
-
 }
-
-
 
 .artpage .contentart{
-
     width:45em;
-
 }
-
-
 
 .domaine{
 
     text-align: center;
-
 }
-
-
 
 .choose{
-
     font-family: "Rockwell",  sans-serif;
-
     font-weight: 700;
-
-
-
 }
-
-
 
 .workclass ul{
-
-
-
     margin-bottom: 2.5em;
 
+        li{
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.30em;
+            text-align: center;
+            background-image: url('img/spritework.png');
+            width: 85px;
+            height: 85px;
+            background-repeat: no-repeat;
+            margin:0.7em;
+}
 }
 
-
-
-.workclass LI{
-
+.workclass li{
     display: inline-block;
-
     font-weight: 700;
-
     font-size: 1.30em;
-
     text-align: center;
-
     background-image: url('img/spritework.png');
-
     width: 85px;
-
     height: 85px;
-
     background-repeat: no-repeat;
-
     margin:0.7em;
-
 }
-
-
 
 .workclass a{
-
     display: block;
-
     height: 85px;
-
     height:85px;
-
     text-decoration: none;
-
 }
-
-
-
-
-
-
 
 .workclass li:first-of-type{
-
     background-position: 0 -173.97698974609375px ;
-
     text-indent: -1000em;
-
 }
 
-
-
 .workclass li:last-child{
-
     background-position: 0 -86.96697998046875px ;
     text-indent: -1000em;
 }
-
-
 
 .tag-link-5{
     background-position: 0 0;
@@ -1485,6 +953,37 @@ padding-left: 0px;
 
 .commentSpace{
     clear:both;
+    width:31em;
+
+    h4{
+        clear: both;
+    }
+
+    .readMore{
+        padding: 1em;
+        padding-bottom: 2.4em;
+        width: 8em;
+    }
+}
+
+.comment{
+    margin-top: 16px;
+    clear:both;
+    margin-bottom: 1.5em;
+    width:398px;
+
+    img{
+        float: left;
+        margin-right: 1em;
+
+    }
+    p{
+        padding-top: 1.4em;
+    }
+}
+
+.mainSingle{
+    margin-bottom: 1em;
 }
 
 
@@ -1544,8 +1043,8 @@ padding-left: 0px;
 margin: 0em 1.5em 0 1.5em;
 
     li{
-    background-size: 50px;
-    width: 50px;
+    background-size: 75px;
+    width: 75px;
     height: auto;
 
         a{
@@ -1559,7 +1058,7 @@ margin: 0em 1.5em 0 1.5em;
 }
 
 .ic_linkedin{
-    background-position:  0 -101.970001px;
+    background-position: 0 -158.98199462890625px ;
 }
 
 .ic_facebook{
@@ -1567,18 +1066,23 @@ margin: 0em 1.5em 0 1.5em;
 }
 
 .ic_twitter{
-    background-position: 0 -51.977997px;
+    background-position: 0 -78.98199462890625px ;
 }
 
 .lastArticles{
     width: 100%;
     padding: 0 1em 0 1em;
     box-sizing: border-box;
+
 }
+
+
+
 
 .arttitle{
     margin-top: 0;
     line-height: 1em;
+    color: @greyTitle;
 }
 
 .footerclass{
