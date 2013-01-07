@@ -70,7 +70,13 @@
 
     <?php $args = array( 'post_type' => 'blogart', 'posts_per_page' => 3 );
     $loop = new WP_Query( $args );
-    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+    while ( $loop->have_posts() ) : $loop->the_post();
+    $postId = get_the_ID();
+                        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+                        $url = $thumb['0'];
+                        $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+                        ?>
+    ?>
         <section class=" lastArticles">
             <h1 class="hiddentitle">Les derniers articles</h1>
             <article>
@@ -83,11 +89,23 @@
                 </hgroup>
                 <div class="articontent">
                     
-                    <?php the_post_thumbnail('featured'); ?>
+                    <a class="fancybox" href="<?php echo $url;?>"><?php the_post_thumbnail('featured'); ?></a>
+
                   
                     <p class="txtart"><?php the_excerpt(); ?></p>       
                 </div>
             </article>         
         </section>
     <?php endwhile; ?>
+
+                                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jflow.plus.js"></script>
+
+                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/plugins.js"></script>
+
+                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
+
+                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.fancybox.pack.js"></script>
+
 <?php get_footer(); 

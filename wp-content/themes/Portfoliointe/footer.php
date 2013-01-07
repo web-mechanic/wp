@@ -39,26 +39,7 @@
             </div>
         </div>
 
-   
 
-
-
-
-
-
-
-</section>
-
-
-                                    
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/vendor/jquery-1.8.1.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jflow.plus.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/plugins.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
 
                                    
 <script type="text/javascript">
