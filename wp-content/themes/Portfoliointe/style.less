@@ -217,7 +217,7 @@ a{
         float: left;
     }
     input[type="submit"]{
-        background-color: @buttonBlue;
+        background-color: @greyTitle;
         border-radius: 10px;
         border: none;
         float:right;
@@ -226,6 +226,10 @@ a{
         width: 20%;
         height: 2.8em;
         vertical-align: middle;
+        -webkit-transition: background-color 0.3s ease-in-out;
+        -moz-transition: background-color 0.3s ease-in-out; 
+        -o-transition: background-color 0.3s ease-in-out;
+       transition: background-color 0.3s ease-in-out; 
 
         &:hover{
         background-color: @buttonBlueHover;
@@ -997,7 +1001,7 @@ navptf a:hover{
     margin-bottom:1.3em;
 
     img{
-        width: 35em;
+        width: 100%;
         height: auto;
         clear: both;
         margin: 1em 0 1em 0;
@@ -1162,12 +1166,15 @@ navptf a:hover{
 }
 
 
-.artpage, .hereisthearticle{
-    width:45em;
-}
+.artpage{
+    margin-top: 1em;
 
-.artpage .contentart{
-    width:45em;
+        .hereisthearticle{
+            width:45em;
+}
+        .contentart{
+            width:45em;
+}
 }
 
 .domaine{

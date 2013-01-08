@@ -75,7 +75,7 @@
                         $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
                         $url = $thumb['0'];
                         $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-                        ?>
+                        
     ?>
         <section class=" lastArticles">
             <h1 class="hiddentitle">Les derniers articles</h1>

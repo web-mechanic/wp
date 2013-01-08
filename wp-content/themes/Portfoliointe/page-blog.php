@@ -7,7 +7,12 @@ get_header();
 <?php $args = array( 'post_type' => 'blogart', 'posts_per_page' => 7 );
 $loop = new WP_Query( $args );
 if($loop->have_posts()):
-while ( $loop->have_posts() ) : $loop->the_post(); ?>
+while ( $loop->have_posts() ) : $loop->the_post();
+    $postId = get_the_ID();
+                        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+                        $url = $thumb['0'];
+                        $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+ ?>
 
                 <article class="articles">                   
 
@@ -20,7 +25,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     </header>
 
                     <section class="contentblog">
-                        <section><?php the_post_thumbnail('blogimg'); ?></section>
+                        <section><a class="fancybox" href="<?php echo $url;?>"><?php the_post_thumbnail('blogimg'); ?></a></section>
 
                         <p>
                             <?php the_excerpt();?>
@@ -45,17 +50,13 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
             <section class="rightblog">
 
-                <section class="search">
-                    
-                    <form action="#" method="get">
-                        <h2> <span class="dotOrange">.</span>Search</h2>
-<input class="blogsearch" type="text" placeholder="Typography" >
-<input class="sendingbut" type="submit" value="Go!" />
-                    </form>
-
-
-                    
-                </section>
+                <section class="search">     
+      <h2> <span class="dotOrange">.</span>Search</h2>
+          <?php get_search_form(); ?>
+<!-- <input class="blogsearch" type="text" placeholder="Typography" >
+<input class="sendingbut" type="submit" value="Go!" /> -->
+    </section>
+    
                 <section class="tag">
                          <h2> <span class="dotOrange">.</span> Tags </h2>
                     <span class="tagclass"> <?php wp_tag_cloud( array( 'taxonomy'=> 'tags', 'format'=>'list' ) );?> </span>
@@ -73,6 +74,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         while($loop->have_posts()):
                         $loop->the_post();
                         $postId = get_the_ID();
+
                         ?>
                 <li class="ic_<?php echo get_post_meta($postId,'icone',true);?>"> <a href ="<?php the_content();?>" title="Mon profil">  </a> </li>
 
@@ -95,6 +97,12 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 </section>
             </section>
         </section>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
+<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.fancybox.pack.js"></script>
+
+
 
         <?php
             get_footer();?>

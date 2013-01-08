@@ -28,7 +28,7 @@ a{text-decoration:none;color:#666666;}
 .rightblog{float:right;width:18.3em;padding-top:2.5em;}.rightblog h2{margin-top:1em;clear:both;}
 .search label{display:none;}
 .search input[type="text"]{width:73%;padding:0.5em 0;font-family:'Open Sans',sans-serif;color:#E5E5E5;display:block;height:1.5em;margin:1em 0em 0 0;border-radius:5px;float:left;}
-.search input[type="submit"]{background-color:#69d2e7;border-radius:10px;border:none;float:right;margin-bottom:2.5em;color:white;width:20%;height:2.8em;vertical-align:middle;}.search input[type="submit"]:hover{background-color:#00cccc;}
+.search input[type="submit"]{background-color:#666666;border-radius:10px;border:none;float:right;margin-bottom:2.5em;color:white;width:20%;height:2.8em;vertical-align:middle;-webkit-transition:background-color 0.3s ease-in-out;-moz-transition:background-color 0.3s ease-in-out;-o-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;}.search input[type="submit"]:hover{background-color:#00cccc;}
 .search h2{margin-top:0em;}
 #accroche{font-family:"rockwell","Arvo",serif;font-weight:700;line-height:1.1em;font-size:3.5em;text-align:center;text-shadow:2px 2px 0px #eee, 4px 4px 0px #707070;width:77%;margin:0 auto;margin-top:0.5em;}
 .large{font-size:1.6em;line-height:1.2em;color:#f15a24;text-shadow:3px 3px 0px #eee, 5px 5px 0px #707070;}
@@ -142,7 +142,7 @@ navptf a:hover{opacity:.5;transition:transform 1000ms ease-out 40ms;}
 .tag h2{margin-bottom:0.35em;}
 .aarticle{color:black;}
 .aarticle:hover{opacity:0.7;}
-.articles{width:100%;margin-bottom:1.3em;}.articles img{width:35em;height:auto;clear:both;margin:1em 0 1em 0;}
+.articles{width:100%;margin-bottom:1.3em;}.articles img{width:100%;height:auto;clear:both;margin:1em 0 1em 0;}
 .titleblog{margin-bottom:0.5em;line-height:1em;clear:both;font-family:"rockwell","Arvo",serif;font-size:2em;color:#666666;}
 .articles footer{height:5em;border-bottom:1px dashed #F15A24;}
 .artinfo{font-family:'Helvetica LT','Open Sans',sans-serif;font-weight:400;text-align:right;}
@@ -167,7 +167,7 @@ navptf a:hover{opacity:.5;transition:transform 1000ms ease-out 40ms;}
 .sponslist a:hover{border:none;text-decoration:none;}
 .sponslist img:hover{box-shadow:2px 2px 0px #eee;}
 .sponslist li{margin-bottom:1.7em;}
-.artpage,.hereisthearticle{width:45em;}
+.artpage{margin-top:1em;}.artpage .hereisthearticle{width:45em;}
 .artpage .contentart{width:45em;}
 .domaine{text-align:center;}
 .choose{font-family:"Rockwell",sans-serif;font-weight:700;}
