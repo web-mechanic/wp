@@ -1,50 +1,54 @@
-  <?php get_header(); ?>
+<?php get_header(); ?>
+  <section class="contentwrap" >
+    <section class="wrapform">
+    	<form id="formContact" action="<?php bloginfo('template_directory'); ?>/contactForm.php" method="post">
+        <fieldset id="fieldcontact">
+        	<label for="name">Name:</label>
+        	<input type="text" id="name" placeholder="Jeremy Leblond" name="name" />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="email@yourprovider.com" name="email" />	
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="What's on your mind?" name="message"></textarea>	
+          <input id="sending" type="submit" value="Send message" />
+        </fieldset>
+    	</form>
+      <div class="accroche" id="response"></div>
+    </section>
 
-   <section class="contentwrap" id="cont">
+    <div class="rightCont">
+      <div class="accroche">
+        <p >Vous souhaiter</p>
+        <p class="large">me contacter?</span></p>
+      </div>
 
-<section id="wrapform">
-	<?php 
-                        $erreurNom = $_SESSION['emptyNom']; 
-                        $erreurEmail = $_SESSION['errorMail'];
-                        $erreurMessage = $_SESSION['emptyTexte'];
-                        session_destroy();
-                    ?>
-	<form action="<?php bloginfo('template_directory'); ?>/contactForm.php" method="post">
-		<fieldset id="fieldcontact">
-			<label for="name">Name:</label>
-			<input type="text" id="name" placeholder="Jeremy Leblond" />
-
-			  <?php if(isset($erreurNom)): ?>
-                                <p class="errors"><?php echo($erreurNom);?></p>
-                            <?php endif; ?>
-			
-			<label for="email">Email:</label>
-			<input type="email" id="email" placeholder="email@yourprovider.com" />
-
-			<?php if(isset($erreurEmail)): ?>
-                                <p class="errors"><?php echo($erreurEmail);?></p>
-                            <?php endif; ?>
-			
-			<label for="message">Message:</label>
-			<textarea id="message" placeholder="What's on your mind?"></textarea>
-
-			 <?php if(isset($erreurMessage)): ?>
-                            <div>
-                                <p class="errors"><?php echo($erreurMessage);?></p>
-                            </div>
-                            <?php endif; ?>
-			
-                        <input id="sending" type="submit" value="Send message" />
-
-
-			
-		</fieldset>
-	</form>
-    <section id="map">
-        <iframe width="340" height="325" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Rue+des+Basses+Trixhes+5,+Couthuin+4218+H%C3%A9ron&amp;aq=0&amp;oq=5,+rue+basses-trixhes+4218+couthuin&amp;sll=50.805935,4.432983&amp;sspn=2.016861,5.410767&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Rue+des+Basses+Trixhes+5,+Couthuin+4218+H%C3%A9ron,+Li%C3%A8ge,+R%C3%A9gion+wallonne&amp;ll=50.528147,5.140483&amp;spn=0.007925,0.021136&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.be/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=Rue+des+Basses+Trixhes+5,+Couthuin+4218+H%C3%A9ron&amp;aq=0&amp;oq=5,+rue+basses-trixhes+4218+couthuin&amp;sll=50.805935,4.432983&amp;sspn=2.016861,5.410767&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Rue+des+Basses+Trixhes+5,+Couthuin+4218+H%C3%A9ron,+Li%C3%A8ge,+R%C3%A9gion+wallonne&amp;ll=50.528147,5.140483&amp;spn=0.007925,0.021136&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">Agrandir le plan</a></small>
+      <ul class="socContact">
+        <?php
+          $loop = new WP_query(array('post_type'=>'sfeed'));                        
+            if($loop->have_posts()):
+            while($loop->have_posts()):
+            $loop->the_post();
+            $postId = get_the_ID();
+        ?>
+        <li class="ic_<?php echo get_post_meta($postId,'icone',true);?>"> <a href ="<?php the_content();?>" title="Mon profil">  </a> </li>
+        <?php
+        endwhile;
+        endif;
+        ?>
+        </ul>
+        </div>  
+        
+        <section class="mapCanvas">   
+          <div id="googleMap" ></div> 
         </section>
-    
-</section>
-            
-        </section>
-        <?php get_footer(); ?>
+
+<div id="panel"></div>
+                      
+        
+    </section>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJMtm_FEqStB-SdbYd5YSY20oBZp5ju8&sensor=true&v=3&language=fr"></script>
+<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.validate.min.js"></script>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.form.js"></script>
+<?php get_footer(); ?>

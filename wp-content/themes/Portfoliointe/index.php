@@ -1,4 +1,6 @@
  <?php get_header();?>
+
+
 <?php
    $home_paged = (get_query_var('paged'));
    $arguments = array(
@@ -9,7 +11,7 @@
    query_posts($arguments);
    get_template_part( 'loop', 'index' );
    ?>
-    <section id="accroche">
+    <section class="accroche">
         <h1 class="hiddentitle">Accroche du site</h1>
             <?php $args = array( 'post_type' => 'accroche', 'posts_per_page' => 1 );
             $loop = new WP_Query( $args );
@@ -19,8 +21,10 @@
     </section>
 
     <section id="jflowperso">
+
         <h1 class="hiddentitle">Slider de présentation des derniers travaux</h1>
             <div id="sliderContainer">
+                
                 <div id="mySlides">
                 <?php
                 $loop = new WP_query(array('post_type'=>'slider'));                    
@@ -30,15 +34,19 @@
                 ?>
                     <div id="slide<?php the_ID();?>" class="slide"> <?php the_post_thumbnail(); ?>"   
                         <div class="slideContent">
+                            <a href="http://ptfwp.dreamdesgn.com/work/" title="Allez voir ce travail et tous les autres&nbsp;!">
                             <h2><?php the_title();?></h2>
                             <p><?php the_excerpt();?></p>
+                                 </a>
                         </div>
                     </div>
+                    
                 <?php
                 endwhile;
                 endif;
                 ?>            
             </div>
+
             <div id="myController">
                 
                 <span class="jFlowControl"></span>
@@ -48,8 +56,10 @@
             </div>
             <div class="jFlowPrev"></div>
             <div class="jFlowNext"></div>
-        </div>        
+        </div>   
+        
     </section>
+
     <section class="sociallinks">
         <h1 class="hiddentitle">Liens vers les réseaux sociaux</h1>
         <ul>
@@ -67,6 +77,7 @@
 			?>
         </ul>
     </section>    
+
 
     <?php $args = array( 'post_type' => 'blogart', 'posts_per_page' => 3 );
     $loop = new WP_Query( $args );
@@ -105,7 +116,6 @@
                                     <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/plugins.js"></script>
 
                                     <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.fancybox.pack.js"></script>
+ <?php if (is_page(37)) { echo 'onload="initialize()"'; }  ?>
 
 <?php get_footer(); 

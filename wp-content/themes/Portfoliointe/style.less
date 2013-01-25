@@ -158,8 +158,8 @@ h2{
             padding: 0.5em;
 
             &:hover{
-                    border-bottom: 1px dashed;
-                    border-color: rgb(241, 90, 36);
+                background-color: #f15a24;
+                color: white;
             }
         }
     }
@@ -242,7 +242,7 @@ a{
 
 /*Accroche*/
 
-#accroche{   
+.accroche{   
     font-family: "rockwell","Arvo", serif;
     font-weight: 700;
     line-height: 1.1em;
@@ -316,7 +316,7 @@ a{
 .slide h2 {  font-family:  "rockwell","Arvo", serif; color: #FFF;  margin: 0 0 5px 0; font-size: 1.2em; }
 .slide p { font-size: 14px; color: #FFF; margin: 0; }
 .jFlowSlideContainer { overflow: hidden; }
-.jFlowSlideContainer a { color: #F90; text-decoration: none; font-style: italic; }
+.jFlowSlideContainer a { color: #F90; text-decoration: none;}
 .jFlowSlideContainer a:hover { text-decoration: none; }
 .jFlowSlideContainer a:focus { position: relative; top: 1px; }
 .jFlowNext { background:url("img/slider/arrows.png") no-repeat scroll 0 -35px transparent; height:130px; position:absolute; top:75px; right: -50px; width:50px; cursor:pointer; }
@@ -865,14 +865,89 @@ a{
     margin-top: 1.5em;
 }
 
-#wrapform{
+.wrapform{
     margin:2.5em 0em 2.5em 0em;
+
+    form {
+    float: left;
+    width: 50%;
+    margin-bottom: 1.5em;
+    }
+
+    input[type="submit"]{
+margin-top: 1em;
+background-color: rgba(112, 112, 112, 0.4);
+border: none;
+color: white;
+font-family: 'Rockwell',sans-serif;
+font-weight: 700;
+font-size: 1.5em;
+padding: 0.5em;
+border-radius: 5px;
+float: right;
 }
 
-#wrapform form {
-    float: left;
-    width: 62%;
+input{
+    color: black;
 }
+
+    .accroche{
+font-family: "rockwell","Arvo",serif;
+font-weight: 700;
+line-height: 1.1em;
+font-size: 3.65em;
+margin: 0;
+text-shadow: 2px 2px 0px #EEE, 4px 4px 0px #707070;
+float: right;
+width: 50%;
+}
+
+.large {
+
+color: #F15A24;
+
+font-size: 1em;
+}
+
+.socContact{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.socContact li{
+    background-image: url('img/spritessoc.png');
+    width: 75px;
+    display: inline-block;
+    margin-top: 0.4em;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+    background-repeat: no-repeat;
+}
+
+.socContact li:hover{
+    border-radius:50px;
+    box-shadow: 1px 1px 0px #eee, 3px 3px 0px #707070;
+    text-decoration: none;
+}
+
+.socContact a{
+    display: block;
+    height: 75px;
+    height:75px;
+}
+
+.vcard{
+    color:black;
+    font-weight: 700;
+color: #707070;
+    .email{
+        color:#707070;
+    }
+}
+
+}
+
+
 
 #fieldcontact{
     background-color: rgba(112, 112, 112, 0.2);
@@ -882,7 +957,7 @@ a{
     border-radius:5px;
 }
 
-#wrapform label{
+.wrapform label{
     display: block;
     width:10em;
     float:left;
@@ -893,15 +968,23 @@ a{
     text-shadow:1px 1px 0 0 ;
 }
 
-#wrapform #email, #wrapform #name{
+.wrapform #email, .wrapform #name{
     display: block;
     width: 16em;
     height: 1.5em;
     margin: 1em 0em 0 0;
     border-radius:5px;
+        padding:0.5em;
+    font-family: 'Open Sans', sans-serif;
+     color: #E5E5E5;
+     display: block;
+    width: 16em;
+    height: 1.5em;
+    margin: 1em 0em 0 0;
+    border-radius: 5px;
 }
 
-#wrapform textArea{
+.wrapform textArea{
     min-width: 97%;
     max-width:100%;
     height:10em;
@@ -910,42 +993,34 @@ a{
     border-radius:5px;
 }
 
-#sending{
-    float:right;
-    display:inline;
-    margin: 2em -0.3em 0em 0em;
-    clear:both;
-    margin-left: 2em;
-    text-align: center;
-    background-color: rgba(112, 112, 112, 0.4);
-    border:none;
-    color:#FFFFFF;
-    font-family: 'Rockwell', sans-serif;
-    font-weight: 700;
-    font-size: 1.3em;
-    border-radius:5px;
-    padding: 1em;
+.rightCont{
+    float: right;
+    width: 28.6em;
+
+    .accroche{
+        font-size: 2.9em;
+        line-height: 1;
+    }
 }
 
-input{
-    padding:0.5em;
-    font-family: 'Open Sans', sans-serif;
-     color: #E5E5E5;
-     display: block;
-width: 16em;
-height: 1.5em;
-margin: 1em 0em 0 0;
-border-radius: 5px;
-}
+
+
 
 #sending:hover{
     color:rgb(241,90,36);
 }
 
-#map{
-    width:38%;
-    float:left;
+.mapCanvas{
 }
+
+#googleMap{
+width: 57.317em;
+height: 480px;
+margin-bottom: 2.5em;
+border-radius: 10px;
+}
+
+
 
 /*work*/
 
@@ -1276,7 +1351,7 @@ navptf a:hover{
 
 
 .Warptop{
-    height: 140px;
+    height: 225px;
 
     #logo{
     height: auto;
@@ -1291,11 +1366,17 @@ navptf a:hover{
 
     clear: both;
     margin: 0;
+    width: 100%;
     text-align: center;
-    margin-top: 0.5em;
 
-    a{
+
+        li{
+        display:block;
+        margin-bottom: 0.5em;
+
+        a{
         margin:0;
+        padding: 0;
 
 
         &:hover{
@@ -1303,10 +1384,15 @@ navptf a:hover{
             color:@orange;
         }
     }
+
+
+    
+    }
 }
 
-#accroche{
-    font-size: 1.2em;
+
+.accroche{
+    font-size: 2em;
     text-shadow:none;
     margin-top: 1em;
     
@@ -1314,6 +1400,7 @@ navptf a:hover{
 
 .large{
     text-shadow:none;
+    font-size: 1em;
 }
 
 #jflowperso{
@@ -1354,6 +1441,15 @@ margin: 0em 1.5em 0 1.5em;
     width: 100%;
     padding: 0 1em 0 1em;
     box-sizing: border-box;
+    margin-top: 1.5em;
+
+    img{
+        width:100%;
+    }
+
+    .txtart{
+        clear: both;
+    }
 
 }
 
@@ -1413,7 +1509,7 @@ margin: 0em 1.5em 0 1.5em;
     width:12.2em
 }
 
-#wrapform #email, #wrapform #name {
+.wrapform #email, .wrapform #name {
 
     width:14.7em;
 }
