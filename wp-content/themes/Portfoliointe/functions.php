@@ -52,7 +52,7 @@ if(!function_exists(portfolio_setup)){
     function portfolio_setup(){
         add_theme_support('post-thumbnails');
 if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'taille-perso', 313, 313, true);
+    add_image_size( 'taille-perso', 300, 300, false);
      add_image_size( 'blogimg', 574, 313, true);
      add_image_size( 'slider', 939, 299, true);
     
@@ -62,6 +62,7 @@ if ( function_exists( 'add_image_size' ) ) {
 add_filter('image_size_names_choose', 'my_image_sizes'); // le filtre qui permet d'ajouter la nouvelle taille au gestionnaire de médias
 function my_image_sizes($sizes) {
         $addsizes = array(
+                "taille-perso"=>__("taille-perso"),
                 "featured" => __( "Featured"),
                 "blogimg" => __("Blogimg"),
                 "slider" => __("Slider") // on indique ici le nom de la nouvelle image (défini dans add_image_size), et le texte qui doit apparaître pour la sélection

@@ -78,18 +78,18 @@
         </ul>
     </section>    
 
-
-    <?php $args = array( 'post_type' => 'blogart', 'posts_per_page' => 3 );
-    $loop = new WP_Query( $args );
-    while ( $loop->have_posts() ) : $loop->the_post();
-    $postId = get_the_ID();
-                        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
-                        $url = $thumb['0'];
-                        $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-                        
-    ?>
-        <section class=" lastArticles">
-            <h1 class="hiddentitle">Les derniers articles</h1>
+    <section class=" lastArticles">
+        <h1 class="hiddentitle">Les derniers articles</h1>
+            <?php $args = array( 'post_type' => 'blogart', 'posts_per_page' => 3 );
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+            $postId = get_the_ID();
+                                $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+                                $url = $thumb['0'];
+                                $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+                                
+            ?>
+    
             <article>
                 <hgroup>
                     <h2 class="arttitle"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h2>
@@ -100,14 +100,15 @@
                 </hgroup>
                 <div class="articontent">
                     
-                    <a class="fancybox" href="<?php echo $url;?>"><?php the_post_thumbnail('featured'); ?></a>
+                    <a class="fancybox" href="<?php echo $url;?>"><?php the_post_thumbnail('taille-perso'); ?></a>
 
                   
                     <p class="txtart"><?php the_excerpt(); ?></p>       
                 </div>
             </article>         
-        </section>
+        
     <?php endwhile; ?>
+    </section>
 
                                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 

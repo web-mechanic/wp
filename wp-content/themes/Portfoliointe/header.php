@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     </head>
-<body <?php if (is_page(37)) { echo 'onload="initialize()"'; }  ?>>
+<body <?php if (is_page(37)) { echo 'onload="initialize()"'; }  ?> >
 
         <h1 class="hiddentitle">portfolio de Thomas Lissens</h1>
             <section>

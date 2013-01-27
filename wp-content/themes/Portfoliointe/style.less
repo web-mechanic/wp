@@ -72,8 +72,8 @@ footer, header, hgroup, menu, nav, section {
 /***********************Less**************************/
 @orange:rgb(241, 90, 36);
 @greyTitle:#666;
-@buttonBlue:#69D2E7;
-@buttonBlueHover:rgba(0, 204, 204, 1);
+@buttonGreen:#5BA68F;
+@buttonGreenHover:rgba(0, 204, 204, 1);
 /***********************GENERAL STYLE**************************/
 .hiddentitle{
 display:none;
@@ -232,7 +232,7 @@ a{
        transition: background-color 0.3s ease-in-out; 
 
         &:hover{
-        background-color: @buttonBlueHover;
+        background-color: @buttonGreenHover;
 }
 }    
     h2{
@@ -319,8 +319,8 @@ a{
 .jFlowSlideContainer a { color: #F90; text-decoration: none;}
 .jFlowSlideContainer a:hover { text-decoration: none; }
 .jFlowSlideContainer a:focus { position: relative; top: 1px; }
-.jFlowNext { background:url("img/slider/arrows.png") no-repeat scroll 0 -35px transparent; height:130px; position:absolute; top:75px; right: -50px; width:50px; cursor:pointer; }
-.jFlowPrev { background:url("img/slider/arrows.png") no-repeat scroll -84px -35px transparent; height:130px; position:absolute; top:75px; left: -50px; width:50px; cursor:pointer; }
+.jFlowNext { background:url("img/slider/arrows.png") no-repeat scroll 0 -35px transparent; height:130px; position:absolute; top:75px; right: 0px; width:50px; cursor:pointer; }
+.jFlowPrev { background:url("img/slider/arrows.png") no-repeat scroll -84px -35px transparent; height:130px; position:absolute; top:75px; left: 0px; width:50px; cursor:pointer; }
 .jFlowPrev:hover { background-position: -84px -235px; }
 .jFlowNext:hover { background-position: 0px -235px; }
 .slide{border-radius:25px;}
@@ -592,6 +592,28 @@ a{
     width:57.317em;
     margin: 0 auto;
     margin-top: 0em;
+
+    article{
+        margin-top: 5em;
+        clear: both;
+    }
+
+     img
+    {
+    opacity: 0.3;
+    border: none;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out; 
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; 
+
+    }
+
+    &:hover img{
+       opacity: 0.9; /* opacite au survol */
+  
+
+    }
 }
 
 .articontent{
@@ -632,22 +654,7 @@ a{
     }
 }
 
-/*.lastArticles img:hover+p{
-    color:#E5E5E5;
-    z-index: 2;
-    background-color:rgba(150,150,150,0.9);
-    position:relative;
-    top: -5.35em;
-    padding:0.5em 0.5em 0.5em 0.5em ;
-    visibility:visible;
-}
-
-.lastArticles p:hover{
-    visibility: visible;
-}
-*/
-
-.lastArticles{
+/*.lastArticles{
     clear:both;  
 
         section{
@@ -660,27 +667,12 @@ a{
          &:last-child{
             margin-left: 0;
         }
-    }
+        }
 
-    img
-    {
-    opacity: 0.3;
-    border: none;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out; 
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out; 
-
-    }
-
-    &:hover img{
-       opacity: 0.9; /* opacite au survol */
-  
-
-    }
+   
 
 
-}
+}*/
 
 
 
@@ -1138,21 +1130,19 @@ navptf a:hover{
 }
 
 .readMore{
-    padding:1em;
-    background-color: @buttonBlue;
+    padding:0.7em;
+    background-color: @buttonGreen;
     border-radius: 10px;
-    border: none;
     float:right;
     margin-bottom: 2.5em;
     color:white;
-    clear: both;
-        -webkit-transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
     -moz-transition: background-color 0.3s ease-in-out; 
     -o-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out; 
 
     &:hover{
-    background-color: @buttonBlueHover;
+    background-color: @orange;
 }
 }
 

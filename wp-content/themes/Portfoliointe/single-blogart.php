@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<div class="main single">
-  <?php if (have_posts()) : ?>
+  <div class="main single">
+    <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-   <section class="contentwrap" >
+      <section class="contentwrap" >
             
            <article class="artpage">
                <header>
