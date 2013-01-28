@@ -55,6 +55,7 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'taille-perso', 300, 300, false);
      add_image_size( 'blogimg', 574, 313, true);
      add_image_size( 'slider', 939, 299, true);
+     add_image_size( 'blogsingleimg', 574, 313, true);
     
      // on vérifie que la fonction existe, puis on crée la nouvelle taille d'image. Le dernier paramètre à true indique qu'il faut rogner l'image pour qu'elle s'adapte aux dimensions
 }

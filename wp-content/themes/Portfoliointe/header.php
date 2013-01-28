@@ -9,7 +9,7 @@
     <head>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" >
         <meta charset="<?php bloginfo('charset'); ?>">
-        <title>Portfolio de Thomas Lissens</title>
+        <title><?php if ( is_home() ) { bloginfo('name');} ?><?php if ( is_archive() && !is_category() ) { echo ('Archives');} ?> <?php wp_title(''); ?></title>
         <meta name="description" content="Portfolio de Thomas Lissens - Créateur de site web">
         <meta name="google-site-verification" content="aY0z0xRiNnhDw0UGfKwhV1-JwuuKq_lq9q2i21GwXXY" /> 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>

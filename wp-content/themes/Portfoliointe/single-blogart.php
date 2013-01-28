@@ -2,7 +2,7 @@
   <div class="main single">
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-      <section class="contentwrap" >
+      <section class="blogContentwrap" >
             
            <article class="artpage">
                <header>

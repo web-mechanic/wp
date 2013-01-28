@@ -179,6 +179,11 @@ a{
     width: 57.317em;
 }
 
+.blogContentwrap{
+    margin: 0 auto ;
+    width: 45em;
+}
+
 #cont{
     height:40em;
 }
@@ -195,11 +200,14 @@ a{
     padding-top: 2.5em;
 
     h2{
-        margin-top: 1em;
+        
         clear: both;
     }
 }
 
+.success{
+    line-height: 1.45em;
+}
 .search{ 
     label{
         display:none;
@@ -639,15 +647,24 @@ a{
 .contentart img{
     float:left;
     margin-right: 1.4em;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.contentwrapWork{
+    margin: 0 auto;
+    width: 45em;
 }
 
 .contentwork{ 
     img{
+
         box-shadow: 0 5px 10px #777;
 }
     p{
         clear:both;
-        padding-top: 1.5em;
+        padding-bottom: 1em;
 }
     .readMore{
         margin: 0;
@@ -1131,7 +1148,7 @@ navptf a:hover{
 
 .readMore{
     padding:0.7em;
-    background-color: @buttonGreen;
+    background-color: @orange;
     border-radius: 10px;
     float:right;
     margin-bottom: 2.5em;
@@ -1142,7 +1159,7 @@ navptf a:hover{
     transition: background-color 0.3s ease-in-out; 
 
     &:hover{
-    background-color: @orange;
+    background-color: lightgrey;
 }
 }
 
@@ -1309,6 +1326,7 @@ navptf a:hover{
         padding: 1em;
         padding-bottom: 2.4em;
         width: 8em;
+        height: 2em;
     }
 }
 
@@ -1316,7 +1334,7 @@ navptf a:hover{
     margin-top: 16px;
     clear:both;
     margin-bottom: 1.5em;
-    width:398px;
+    width: 35em;
 
     img{
         float: left;

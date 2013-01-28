@@ -31,12 +31,7 @@ get_header();
     endif; ?>
   </div>
   <div class="rightblog">
-    <section class="search">     
-      <h2> <span class="dotOrange">.</span>Search</h2>
-          <?php get_search_form(); ?>
-<!-- <input class="blogsearch" type="text" placeholder="Typography" >
-<input class="sendingbut" type="submit" value="Go!" /> -->
-    </section>
+    
     <section >
       <h2> <span class="dotOrange">.</span> Be Social </h2>
       <ul class="socialblog">
@@ -53,14 +48,6 @@ get_header();
         endif;
         ?>
       </ul>                 
-    </section>
-    <section class="advertisement">
-      <h2> <span class="dotOrange">.</span> advertisement </h2>
-      <ul class="sponslist">
-        <li> <a href="#"> <img src="../img/sponsor.png" alt="Liens publicitaire du sponsor X" width="275" height="275"></a> </li>
-        <li> <a href="#"> <img src="../img/sponsor.png" alt="Liens publicitaire du sponsor X" width="275" height="275"></a> </li>
-        <li> <a href="#"> <img src="../img/sponsor.png" alt="Liens publicitaire du sponsor X" width="275" height="275"></a> </li>
-      </ul>
     </section>
   </div>
 </section>

@@ -51,13 +51,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
             <section class="rightblog">
 
-                <section class="search">     
-      <h2> <span class="dotOrange">.</span>Search</h2>
-          <?php get_search_form(); ?>
-<!-- <input class="blogsearch" type="text" placeholder="Typography" >
-<input class="sendingbut" type="submit" value="Go!" /> -->
-    </section>
-    
+                  
                 <section class="tag">
                          <h2> <span class="dotOrange">.</span> Tags </h2>
                     <span class="tagclass"> <?php wp_tag_cloud( array( 'taxonomy'=> 'tags', 'format'=>'list' ) );?> </span>
@@ -88,14 +82,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
                     
                 </section>
                 
-                <section class="advertisement">
-                         <h2> <span class="dotOrange">.</span> advertisement </h2>
-                         <ul class="sponslist">
-                             <li> <a href="#"> <img src="../img/sponsor.png" width="275" height="275"></a> </li>
-                              <li> <a href="#"> <img src="../img/sponsor.png" width="275" height="275"></a> </li>
-                               <li> <a href="#"> <img src="../img/sponsor.png" width="275" height="275"></a> </li>
-                         </ul>
-                </section>
+                
             </section>
         </section>
 

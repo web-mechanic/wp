@@ -1,5 +1,5 @@
 <?php if ( have_comments() ) : ?>  
-<h4><?php printf( _n( 'Un commentaire', '%1$s Commentaires', get_comments_number() ),number_format_i18n( get_comments_number() ) );  
+<h4><?php printf( _n( 'Il y a un commentaire', 'Il y a %1$s Commentaires', get_comments_number() ),number_format_i18n( get_comments_number() ) );  
 ?></h4>  
 
 

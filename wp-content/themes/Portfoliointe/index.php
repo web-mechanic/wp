@@ -34,7 +34,7 @@
                 ?>
                     <div id="slide<?php the_ID();?>" class="slide"> <?php the_post_thumbnail(); ?>"   
                         <div class="slideContent">
-                            <a href="http://ptfwp.dreamdesgn.com/work/" title="Allez voir ce travail et tous les autres&nbsp;!">
+                            <a href="http://ptfwp.dreamdesgn.com/work/" title="Allez voir ce travail et tous les autres&nbsp;!"></a>
                             <h2><?php the_title();?></h2>
                             <p><?php the_excerpt();?></p>
                                  </a>

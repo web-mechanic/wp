@@ -2,7 +2,7 @@
   <div class="mainSingle">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
-        <section class="contentwrap" >
+        <section class="contentwrapWork" >
           <article class="artpage">
             <header>
               <hgroup>
@@ -17,6 +17,14 @@
               </section>
             </section>
           </article>
+
+                                   <footer class="singleblogart">
+                            <section class="moresec">
+                              <a class="readMore" href="http://ptfwp.dreamdesgn.com/work/">Back to Full List</a>
+                           
+                            <footer>
+
+
         </section>
  </div>
  <?php
