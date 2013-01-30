@@ -1,73 +1,5 @@
-/*
-Theme Name: Web Mechanic Portfolio
-Author: Thomas Lissens
-Description: A theme designed by me
-License: GNU General Public License v2 or later
-Tags:nice
-*/
-
-/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
--------------------------------------------------------------- */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	border: 0;
-	font-family: inherit;
-	font-size: 100%;
-	font-style: inherit;
-	font-weight: inherit;
-	margin: 0;
-	outline: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
-
-:focus {/* remember to define focus styles! */
-	outline: 0;
-}
-
-body {
-	background: #fff;
-	line-height: 1;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-table {/* tables still need 'cellspacing="0"' in the markup */
-	border-collapse: separate;
-	border-spacing: 0;
-}
-
-caption, th, td {
-	font-weight: normal;
-	text-align: left;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-
-blockquote, q {
-	quotes: "" "";
-}
-
-a img {
-	border: 0;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+@import "reset";
+@import "typography";
 
 /***********************Less**************************/
 @orange:rgb(241, 90, 36);
@@ -77,11 +9,6 @@ footer, header, hgroup, menu, nav, section {
 /***********************GENERAL STYLE**************************/
 .hiddentitle{
 display:none;
-}
-
-a{
-    text-decoration: none;
-    color:@greyTitle;
 }
 
 .dotOrange{
@@ -112,17 +39,6 @@ body{
     color: rgb(241,90,36);
 }
 
-h2{
-    font-family: "rockwell","Arvo", serif;
-    font-size: 2em;
-}
-
-.arttitle{
- margin-bottom: 22px;
- margin-top: 1em;
- color: @greyTitle;
-}
-
 .loga:hover{
     opacity:0.85;
     border:none;
@@ -133,11 +49,14 @@ h2{
     background-repeat: repeat;
     height:90.2px;
     box-shadow: 0 1px 2px 1px;
+
+    h2{
+        float: left;
+    }
 }
 
-#logo{
-    margin-top: 0.8em;
-    margin-left: 2em;
+.logo{
+margin-top: 0.3em;
 }
 
 .first{
@@ -168,15 +87,9 @@ h2{
 .first A:active{
     color: @orange;
 }
-
-a{
-    text-decoration: none;
-    color:@greyTitle;
-}
-
 .contentwrap{
     margin: 0 auto 0;
-    width: 57.317em;
+    width: 59.7em;
 }
 
 .blogContentwrap{
@@ -199,8 +112,7 @@ a{
     width:18.3em;
     padding-top: 2.5em;
 
-    h2{
-        
+    h2{        
         clear: both;
     }
 }
@@ -254,7 +166,7 @@ a{
     font-family: "rockwell","Arvo", serif;
     font-weight: 700;
     line-height: 1.1em;
-    font-size: 3.5em;
+    font-size: 2.7em;
     text-align:center;
     text-shadow: 2px 2px 0px #eee, 4px 4px 0px #707070;
     width: 77%;
@@ -263,10 +175,7 @@ a{
 }
 
 .large{
-    font-size:1.6em;
-    line-height :1.2em;
     color: rgb(241,90,36);
-    text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
 }
 
 /*Social Links*/
@@ -286,7 +195,7 @@ a{
         width: 75px;
         height: 75px;
         background-repeat: no-repeat;
-        margin:0 0.35em 0 0.35em
+        margin: 1.5em 0.35em 1.5em 0.35em;
     }
 
     a{
@@ -321,7 +230,7 @@ a{
 /*Slider*/
 #sliderContainer { width: 940px; height: 300px; position: relative; margin: 0 auto; margin-top: 1.5em; box-shadow:0 2px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
 .slideContent {  background:url("img/slider/contentBg.png") repeat scroll 0 0 rgba(0, 0, 0, 0.75); position: absolute; bottom:0px; right:0px; padding: 10px; width: 920px; }
-.slide h2 {  font-family:  "rockwell","Arvo", serif; color: #FFF;  margin: 0 0 5px 0; font-size: 1.2em; }
+.slide h2 { color: #FFF;  margin: 0 0 5px 0; font-size: 1.2em; }
 .slide p { font-size: 14px; color: #FFF; margin: 0; }
 .jFlowSlideContainer { overflow: hidden; }
 .jFlowSlideContainer a { color: #F90; text-decoration: none;}
@@ -565,8 +474,8 @@ a{
     background: transparent; /* Fallback for web browsers that doesn't support RGBa */
     background: rgba(0, 0, 0, 0.8);
     -webkit-border-radius: 15px;
-       -moz-border-radius: 15px;
-            border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
     text-shadow: 0 1px 2px #222;
     color: #FFF;
     font-weight: bold;
@@ -602,7 +511,6 @@ a{
     margin-top: 0em;
 
     article{
-        margin-top: 5em;
         clear: both;
     }
 
@@ -614,23 +522,18 @@ a{
     -moz-transition: opacity 0.5s ease-in-out; 
     -o-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out; 
-
     }
 
     &:hover img{
-       opacity: 0.9; /* opacite au survol */
-  
-
+       opacity: 0.9; 
     }
 }
 
 .articontent{
    clear: both;
-   margin-top: 1.5em;
+   margin-top: 1em;
 
    img{
-        width:300px;
-        height:auto;
         float:left;
         margin: 0 1.4em 0.7em 0;
         box-shadow: 0 5px 10px #777;
@@ -658,42 +561,20 @@ a{
 }
 
 .contentwork{ 
+
+    .moresec{
+        margin-top: 1.5em;
+    }
+
     img{
 
         box-shadow: 0 5px 10px #777;
 }
-    p{
-        clear:both;
-        padding-bottom: 1em;
-}
+
     .readMore{
-        margin: 0;
+        text-decoration: none;
     }
 }
-
-/*.lastArticles{
-    clear:both;  
-
-        section{
-            width: 100%;
-            margin-right: 0.8em;
-            margin-left: 0.8em;
-        &:first-of-type{
-            margin-left: 0;
-        }
-         &:last-child{
-            margin-left: 0;
-        }
-        }
-
-   
-
-
-}*/
-
-
-
-/*sitemap*/
 
 .footwrap{
     clear:both;
@@ -737,9 +618,7 @@ a{
         &:hover{
             border-bottom: 1px dashed;
             border-color: rgb(241, 90, 36);
-
             }
-
         }
     }
 }
@@ -778,15 +657,12 @@ a{
 }
 
 #foot #nom{
-
     margin-bottom: 0.5em
-
 }
 
 #foot #e-mail,#foot #nom{
     width:10em;
     margin: 0.3em 0.2em 0 0;
-    text-shadow:1px 1px 0 0 ;
     border-radius: 5px 5px 5px 5px;
     font-family: 'Open Sans',sans-serif;
     padding: 0.3em;
@@ -899,7 +775,6 @@ float: right;
 input{
     color: black;
 }
-
     .accroche{
 font-family: "rockwell","Arvo",serif;
 font-weight: 700;
@@ -912,9 +787,7 @@ width: 50%;
 }
 
 .large {
-
 color: #F15A24;
-
 font-size: 1em;
 }
 
@@ -953,10 +826,7 @@ color: #707070;
         color:#707070;
     }
 }
-
 }
-
-
 
 #fieldcontact{
     background-color: rgba(112, 112, 112, 0.2);
@@ -974,7 +844,6 @@ color: #707070;
     margin: 1.5em 1em 0 0;
     font-weight: 700;
     color: #707070;
-    text-shadow:1px 1px 0 0 ;
 }
 
 .wrapform #email, .wrapform #name{
@@ -1012,9 +881,6 @@ color: #707070;
     }
 }
 
-
-
-
 #sending:hover{
     color:rgb(241,90,36);
 }
@@ -1029,22 +895,7 @@ margin-bottom: 2.5em;
 border-radius: 10px;
 }
 
-
-
-/*work*/
-
-navptf a{
-    opacity: 1;
-}
-
-navptf a:hover{
-
-    opacity: .5;
-    transition: transform 1000ms ease-out 40ms ;
-}
-
 .tagclass li{
-
 
     a{
     background:rgba(241,90,36, 0.6);
@@ -1061,8 +912,6 @@ navptf a:hover{
 }
 
     }
-
-
 }
 
 .tag{
@@ -1070,7 +919,6 @@ navptf a:hover{
         margin-bottom: 0.35em;
     }
 }
-
 
 .aarticle{
     color: black;
@@ -1112,16 +960,13 @@ navptf a:hover{
     font-family: 'Helvetica LT', 'Open Sans', sans-serif;
     font-weight: 400; 
     text-align: right;
+    margin-top: -1.2em;
 }
 
 .author{
     float: left;
     font-family: "helvetica", "Open Sans", sans-serif;
     font-weight:700;
-}
-
-.author:hover{
-    opacity:0.7;
 }
 
 .contentart{
@@ -1138,7 +983,7 @@ navptf a:hover{
 }
 
 .moresec{
-    margin-top: 1.5em;
+    margin-top: -3.5em;
     clear:both;
 }
 
@@ -1157,6 +1002,7 @@ navptf a:hover{
     -moz-transition: background-color 0.3s ease-in-out; 
     -o-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out; 
+    text-decoration: none;
 
     &:hover{
     background-color: lightgrey;
@@ -1212,7 +1058,7 @@ navptf a:hover{
 .socialblog li{
     background-image: url('img/spritessoc.png');
     width: 75px;
-    height: 75.sopx;
+    height: 75px;
     background-repeat: no-repeat;
     margin-bottom: 1em;
 }
@@ -1259,8 +1105,14 @@ navptf a:hover{
 }
 }
 
-.domaine{
+.hereisthearticle h3:before
+{ 
+content:".";
+color: rgb(241,90,36);
+margin-right: 0.4em;
+}
 
+.domaine{
     text-align: center;
 }
 
@@ -1314,6 +1166,19 @@ navptf a:hover{
     border: none;
 }
 
+.articlesWork{
+    width: 47%;
+    height: 630px;
+    margin-bottom: 1.3em;
+    float: left;
+    margin-left: 1.2em;
+
+    img{
+    clear: both;
+    margin: 1em 0 1em 0;
+    }
+}
+
 .commentSpace{
     clear:both;
     width:31em;
@@ -1350,33 +1215,31 @@ navptf a:hover{
     margin-bottom: 1em;
 }
 
-
-
 /********************************Media Queries***********************************/
 /* Smartphones (portrait and landscape) ----------- */
-@media screen and (min-width:100px) and (max-width: 599px){
-
-
+@media only screen and (max-width: 479px) {
 
 .Warptop{
     height: 225px;
 
-    #logo{
-    height: auto;
-    width: 100%;
-    margin: 0;
+    h2{
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    .logo{
+        height: auto;
+        width: 90%;
+        margin: 0;
+        margin-top: 0.25em;
 }
 }
-
-
 
 .first{
-
     clear: both;
     margin: 0;
     width: 100%;
     text-align: center;
-
 
         li{
         display:block;
@@ -1385,25 +1248,14 @@ navptf a:hover{
         a{
         margin:0;
         padding: 0;
-
-
-        &:hover{
-            border-bottom: none;
-            color:@orange;
-        }
-    }
-
-
-    
+    }    
     }
 }
 
-
 .accroche{
-    font-size: 2em;
-    text-shadow:none;
-    margin-top: 1em;
-    
+    font-size: 1.4em;
+    text-shadow: none;
+    margin-top: 1em;    
 }
 
 .large{
@@ -1415,20 +1267,19 @@ navptf a:hover{
     display: none;
 }
 
-#sociallinks ul{
-margin: 0em 1.5em 0 1.5em;
+.sociallinks ul{
+    margin: 0;
+        li{
+        background-size: 75px;
+        width: 75px;
+        height: auto;
 
-    li{
-    background-size: 75px;
-    width: 75px;
-    height: auto;
+            a{
+                height: 75px;
 
-        a{
-            height: 50px;
-
-        &:hover{
-            border: none;
-        }
+            &:hover{
+                border: none;
+            }
 }    
 }
 }
@@ -1453,16 +1304,13 @@ margin: 0em 1.5em 0 1.5em;
 
     img{
         width:100%;
+        height:;
     }
 
     .txtart{
         clear: both;
     }
-
 }
-
-
-
 
 .arttitle{
     margin-top: 0;
@@ -1486,7 +1334,6 @@ margin: 0em 1.5em 0 1.5em;
     padding: 0 1em 0 1em;
     box-sizing: border-box;
     text-align:center;
-
 }
 
 .hfooter{
@@ -1526,30 +1373,152 @@ margin: 0em 1.5em 0 1.5em;
     margin: 0 auto;
     margin-top: 1em;
 }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 959px) {
+  
+/* Correctif menu*/
+.first{
+    margin: 0;
+    float: none;
+    clear: both;
+    text-align: center;
+
+    ul{
+        margin-top: 1em;
+    }
+
+    li{
+        margin-right:  0;
+    }
+}
+
+#jflowperso{
+    display: none;
+}
+
+.accroche{
+    font-size: 2.2em;
+    width: 95%;
+}
+
+.Warptop {
+    height:137px;
+}
+
+.choose{
+    margin-top: 0.7em;
+}
+
+.sociallinks{
+    margin-top: -2.5em;
+}
+
+.lastArticles {
+width: 90%;
+
+}
+
+.readMore{
+    float: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 1em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.footerclass{
+    width: 90%;
+}
+
+.footwrap {
+font-size: 82%;
+}
 
 }
 /* Smartphones (landscape) ----------- */
 @media only screen
-and (min-width : 321px) {
+and (min-width : 321px)  and (max-width: 600px) {
+
+.Warptop {
+height: 243px;
+}
+
+
 /* Styles */
 }
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
 
+.Warptop {
+height: 13em;
+}
+.accroche {
+font-size: 115%;
+width: 95%;
+}
+
+
+.sociallinks ul{
+    margin: 0;
+        li{
+        background-size: 50px;
+        width: 50px;
+        height: auto;
+
+            a{
+                height: 50px;
+
+            &:hover{
+                border: none;
+            }
+}    
+}
+}
+
+.ic_linkedin{
+    background-position: 0 -105.98199462890625px;
+}
+
+.ic_facebook{
+    background-position: 0 0;
+}
+
+.ic_twitter{
+    background-position: 0 -52.98199462890625px;
+}
+
+.sociallinks {
+margin-top: -1em;
+margin-bottom: -3em;
+}
+
+.lastArticles {
+width: 100%;
+}
+
+.author {
+font-weight: 400;
+font-size: 80%;
+}
+
+
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-/* Styles */
+
+
 }
 /* iPads (landscape) ----------- */
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
-/* Styles */
+
 }
 /* iPads (portrait) ----------- */
 @media screen
@@ -1568,10 +1537,5 @@ and (min-width : 1824px) {
 /* Styles */
 }
 /* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
 
 

@@ -11,7 +11,7 @@
    query_posts($arguments);
    get_template_part( 'loop', 'index' );
    ?>
-    <section class="accroche">
+    <section>
         <h1 class="hiddentitle">Accroche du site</h1>
             <?php $args = array( 'post_type' => 'accroche', 'posts_per_page' => 1 );
             $loop = new WP_Query( $args );
@@ -34,10 +34,10 @@
                 ?>
                     <div id="slide<?php the_ID();?>" class="slide"> <?php the_post_thumbnail(); ?>"   
                         <div class="slideContent">
-                            <a href="http://ptfwp.dreamdesgn.com/work/" title="Allez voir ce travail et tous les autres&nbsp;!"></a>
-                            <h2><?php the_title();?></h2>
-                            <p><?php the_excerpt();?></p>
-                                 </a>
+                           <!--  <a href="http://ptfwp.dreamdesgn.com/work/" title="Allez voir ce travail et tous les autres&nbsp;!"> -->
+                                <h2><?php the_title();?></h2>
+                                <p><?php the_excerpt();?></p>
+                            <!-- </a> -->
                         </div>
                     </div>
                     
@@ -93,10 +93,7 @@
             <article>
                 <hgroup>
                     <h2 class="arttitle"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h2>
-                    <h3 class="artinfo"> <span class="author"> <?php the_author(); ?> </span> 
-                    <span class="dateArticle">Publié le <?php the_time('d-m-Y'); ?></span>
-                     <span><?php the_time('G:i'); ?></span>
-                    </h3>
+                    <h3 class="artinfo author">Publié par <?php the_author(); ?> le <?php the_time('d-m-Y'); ?></h3>
                 </hgroup>
                 <div class="articontent">
                     

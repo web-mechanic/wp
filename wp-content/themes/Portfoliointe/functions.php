@@ -52,10 +52,10 @@ if(!function_exists(portfolio_setup)){
     function portfolio_setup(){
         add_theme_support('post-thumbnails');
 if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'taille-perso', 300, 300, false);
+    add_image_size( 'taille-perso', 300, 300, true);
      add_image_size( 'blogimg', 574, 313, true);
      add_image_size( 'slider', 939, 299, true);
-     add_image_size( 'blogsingleimg', 574, 313, true);
+     add_image_size( 'workimg', 460, 326, false);
     
      // on vérifie que la fonction existe, puis on crée la nouvelle taille d'image. Le dernier paramètre à true indique qu'il faut rogner l'image pour qu'elle s'adapte aux dimensions
 }
@@ -65,8 +65,10 @@ function my_image_sizes($sizes) {
         $addsizes = array(
                 "taille-perso"=>__("taille-perso"),
                 "featured" => __( "Featured"),
-                "blogimg" => __("Blogimg"),
-                "slider" => __("Slider") // on indique ici le nom de la nouvelle image (défini dans add_image_size), et le texte qui doit apparaître pour la sélection
+                "blogimg" => __("blogimg"),
+                "slider" => __("Slider"),
+                "workimg" => __("workimg") // on indique ici le nom de la nouvelle image (défini dans add_image_size), et le texte qui doit apparaître pour la sélection
+                
                 );
         $newsizes = array_merge($sizes, $addsizes);
         return $newsizes;
@@ -174,9 +176,9 @@ if(!function_exists('create_post_type')){
         }
 }
 
-   function excerpt_read_more_link($output) {
+function excerpt_read_more_link($output) {
  global $post;
- return $output . '<div class="moresec"> <a class=readMore href="'. get_permalink($post->ID) . '">Read more</a> </div>';
+ return $output . '<a class="readMore moresec" href="'. get_permalink($post->ID) . '">Read&nbsp;more</a>';
 }
 if(! function_exists('build_taxonomies')){
 function build_taxonomies(){
