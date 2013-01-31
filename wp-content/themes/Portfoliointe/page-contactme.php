@@ -16,25 +16,10 @@
     </section>
 
     <div class="rightCont">
-      <div class="accroche">
-        <p >Vous souhaiter</p>
-        <p class="large">me contacter?</span></p>
+      <div class="contactAccr">
+        <p class="accroche">Vous souhaiter</p>
+        <p class="large accroche">me contacter?</span></p>
       </div>
-
-      <ul class="socContact">
-        <?php
-          $loop = new WP_query(array('post_type'=>'sfeed'));                        
-            if($loop->have_posts()):
-            while($loop->have_posts()):
-            $loop->the_post();
-            $postId = get_the_ID();
-        ?>
-        <li class="ic_<?php echo get_post_meta($postId,'icone',true);?>"> <a href ="<?php the_content();?>" title="Mon profil">  </a> </li>
-        <?php
-        endwhile;
-        endif;
-        ?>
-        </ul>
         </div>  
         
         <section class="mapCanvas">   
@@ -48,7 +33,7 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJMtm_FEqStB-SdbYd5YSY20oBZp5ju8&sensor=true&v=3&language=fr"></script>
-<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
+<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/scriptdev.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.validate.min.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.form.js"></script>
 <?php get_footer(); ?>

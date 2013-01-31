@@ -2056,6 +2056,8 @@ position:latLng,
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
   marker.setMap(map);
+ 	google.maps.event.trigger(map,"resize");
+	map.setCenter(cent);
 };
 
 $(function() {
