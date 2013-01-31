@@ -11,6 +11,7 @@
    query_posts($arguments);
    get_template_part( 'loop', 'index' );
    ?>
+   <div role="main">
     <section>
         <h1 class="hiddentitle">Accroche du site</h1>
             <?php $args = array( 'post_type' => 'accroche', 'posts_per_page' => 1 );
@@ -106,6 +107,8 @@
         
     <?php endwhile; ?>
     </section>
+
+    </div>
 
                                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 

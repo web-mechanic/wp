@@ -15,17 +15,17 @@ while ( $loop->have_posts() ) : $loop->the_post();
                         $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
  ?>
 
-                <article class="articles" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">                   
+                <article class="articles" itemscope='' itemtype='http://schema.org/Article'>                   
 
 
                     <header >
                         <h2 class="titleblog"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h2>
-                        <h3 class="artinfo"> <span class="author" itemprop="author" itemscope itemtype="http://http://schema.org/Blog"><?php the_author(); ?></span> 
+                        <h3 class="artinfo"> <span class="author"  itemprop='author' itemscope='' itemtype='http://schema.org/Person' itemprop='name'><?php the_author(); ?></span> 
                             <span class="dateArticle">Publié le <time><?php the_time('d-m Y'); ?> <span class="dotOrange">- </span> <?php the_time('G:i'); ?></time></span> 
                         </h3>
                     </header>
 
-                    <section class="contentblog">
+                    <section class="contentblog" itemprop='articleBody'>
                         <section><a class="fancybox" href="<?php echo $url;?>"><?php the_post_thumbnail('blogimg'); ?></a></section>
 
                         <p>

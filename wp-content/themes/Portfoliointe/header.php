@@ -13,6 +13,7 @@
     <meta name="keywords" content="webdesign, portfolio, thomas lissens, web, print, belgique, liege"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Portfolio de Thomas Lissens - Infographiste spécialisé dans le web mais aussi actif dans la 2d.">
+    <link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory') ;?>/img/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" >
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
@@ -20,12 +21,12 @@
 <body <?php if (is_page(37)) { echo 'onload="initialize()"'; }  ?> >
     <header class="Warptop"> 
         <h1 class="hiddentitle">portfolio de Thomas Lissens</h1>         
-            <a class="loga"  href="http://ptfwp.dreamdesgn.com/home/"><img class="logo" src="http://ptfwp.dreamdesgn.com/wp-content/uploads/2012/10/logo.png" width="360" height="64" title="Web Mechanic logo" alt="Portfolio de Thomas Lissens"></a>
-                <nav class="first">
-                    <h2 class="hiddentitle">Menu de navigation principale</h2>
-                    <?php wp_nav_menu('header_menu'); ?>
-                </nav>
-        </header>
+        <a class="loga"  href="http://ptfwp.dreamdesgn.com/home/"><img class="logo" src="http://ptfwp.dreamdesgn.com/wp-content/uploads/2012/10/logo.png" width="360" height="64" title="Web Mechanic logo" alt="Portfolio de Thomas Lissens"></a>
+        <nav class="first" role="navigation">
+            <h2 class="hiddentitle">Menu de navigation principale</h2>
+            <?php wp_nav_menu('header_menu'); ?>
+        </nav>
+    </header>
 <!--[if lt IE 8]>
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->

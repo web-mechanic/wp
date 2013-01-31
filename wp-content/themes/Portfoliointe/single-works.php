@@ -2,31 +2,28 @@
   <div class="mainSingle">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
-        <section class="contentwrapWork" >
+        <div class="contentwrapWork" >
           <article class="artpage">
             <header>
               <hgroup>
-               <h2 class="arttitle"><span class="dotOrange">.</span> <?php the_title(); ?></h2>
-               <h3 class="artinfo"><span class="author"><?php the_author(); ?></span> <span class="dateArticle">Publié le <time><?php the_time('d-m Y'); ?><span class="dotOrange">- </span> <?php the_time('G:i'); ?></time></span> </h3>
+               <h1 class="arttitle"><span class="dotOrange">.</span> <?php the_title(); ?></h1>
+               <h3 class="artinfo"><span class="author"><?php the_author(); ?></span> <span class="dateArticle">Publié le <?php the_time('d-m Y'); ?><span class="dotOrange">- </span> <?php the_time('G:i'); ?></span> </h3>
               </hgroup>
             </header>
-            <section class="contentart">
-              <section class="contentwork">
-                <?php the_post_thumbnail('Blogimg'); ?>
+            <div class="contentart">
+              <div class="singleWork">
+                <?php the_post_thumbnail('workimg'); ?>
                   <p><?php the_content();?></p>
-              </section>
-            </section>
+              </div>
+            </div>
           </article>
-
-                                   <footer class="singleblogart">
-                            <section class="moresec">
-                              <a class="readMore" href="http://ptfwp.dreamdesgn.com/work/">Back to Full List</a>
-                           
-                            <footer>
-
-
-        </section>
- </div>
+          <footer class="singleblogart">
+            <div class="moresec">
+              <a class="readMore" href="http://ptfwp.dreamdesgn.com/work/">Back to Full List</a>
+            </div>
+          </footer>
+        </div>
+      </div>
  <?php
    endwhile;
    endif;
