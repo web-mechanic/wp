@@ -21,6 +21,13 @@
             <div class="footform">
                 <h2 class="hfooter"><span class="dotOrange">.</span>Newsletter</h2>
 
+                <form action="http://dreamdesgn.us6.list-manage.com/subscribe/post?u=e70478803abc992d0692e8af1&amp;id=34bf400dd9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <label for="mce-EMAIL">
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    </label>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="readMore">
+</form>
+
             </div>
         </div>
 

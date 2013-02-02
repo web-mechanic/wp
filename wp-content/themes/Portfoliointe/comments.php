@@ -4,7 +4,7 @@
 
 
 <?php foreach ($comments as $comment) { ?>  
-<div cclass="comment">  
+<div class="comment">  
     <a name="comment-<?php comment_ID(); ?>"></a>  
     <?php echo get_avatar( $comment->comment_author_email, $size = '40'); ?>  
     <div class="comment-right">  
@@ -24,10 +24,10 @@
 <p>Laisser un commentaire</p>  
 <a class="comments"></a>  
             <form action="<?php bloginfo('url'); ?>/wp-comments-post.php" method="post" id="commentform">  
-                <input type='hidden' class='comment_post_ID' value='<?php echo $post->ID; ?>' id='comment_post_ID' />  
-                <input type="text" value="Name" class="author" onfocus="if(this.value == this.defaultValue) this.value = ''"><label>Nom</label><br />  
-                <input type="email" value="Email" class="email" onfocus="if(this.value == this.defaultValue) this.value = ''"><label>E-mail</label><br />  
-                <input type="text" value="" class="url"><label>Site web (optionnel)</label><br />  
+                <input type='hidden' class='comment_post_ID' value='<?php echo $post->ID; ?>' id='comment_post_ID' /> 
+                <label>Nom</label> <input type="text" value="Name" class="authorComment" onfocus="if(this.value == this.defaultValue) this.value = ''"><br />  
+                <label>E-mail</label> <input type="email" value="Email" class="email" onfocus="if(this.value == this.defaultValue) this.value = ''"><br /> 
+                <label>Site web</label><input type="text" value="" class="url"><br />  
                 <textarea rows="7" cols="60" class="comment"></textarea><br />  
                 <input class="readMore" type="submit" value="Commenter!" />  
             </form>  
