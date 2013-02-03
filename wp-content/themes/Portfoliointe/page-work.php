@@ -12,10 +12,10 @@ get_header();
     $loop = new WP_Query( $args );
     if($loop->have_posts()):
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
-      <article class="articles">
+      <article class="articles" role="article" itemscope="" itemtype="http://schema.org/CreativeWork">
         <header >
           <hgroup>
-          <h1 class="titleblog"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h1>
+          <h1 itemprop="name" class="titleblog"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h1>
           <h3 class="artinfo"> <span class="author" ><?php the_author(); ?></span> 
           <span class="dateArticle">Publié le <?php the_time('d-m Y'); ?> <span class="dotOrange">- </span> <?php the_time('G:i'); ?></span> 
           </h3>

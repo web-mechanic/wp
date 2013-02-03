@@ -91,32 +91,23 @@
                                 
             ?>
     
-            <article>
+            <article itemscope='' itemtype='http://schema.org/Article'>
                 <hgroup>
                     <h2 class="arttitle"><span class="dottitre">.</span><a href="<?php the_permalink(); ?>" title="Click to read more about it"><?php the_title(); ?></a></h2>
                     <h3 class="artinfo author">Publié par <?php the_author(); ?> le <?php the_time('d-m-Y'); ?></h3>
                 </hgroup>
-                <div class="articontent">
+                <div class="articontent" itemprop='articleBody'>
                     
                     <a class="fancybox" href="<?php echo $url;?>"><?php the_post_thumbnail('taille-perso'); ?></a>
 
                   
                     <p class="txtart"><?php the_excerpt(); ?></p>       
                 </div>
-            </article>         
-        
-    <?php endwhile; ?>
-    </section>
-
+            </article>        
+            <?php endwhile; ?>
+            </section>
     </div>
-
-                                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jflow.plus.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/plugins.js"></script>
-
-                                    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
- <?php if (is_page(37)) { echo 'onload="initialize()"'; }  ?>
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jflow.plus.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
 <?php get_footer(); 

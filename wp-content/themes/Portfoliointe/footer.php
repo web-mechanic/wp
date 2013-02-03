@@ -3,7 +3,7 @@
         <div class="cont">
             
                 <nav class="altnav">
-                    <h2 class="hfooter"><span class="dotOrange">.</span>Site Map</h2>
+                    <h2 class="hfooter">Site Map</h2>
                     <?php wp_nav_menu('header_menu'); ?>
                 </nav>
         </div>
@@ -12,14 +12,14 @@
             $loop = new WP_Query( $args );
             if(have_posts):
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <h2 class="hfooter"><span class="dotOrange">.</span><?php the_title(); ?></h2>
+                <h2 class="hfooter"><?php the_title(); ?></h2>
                     <?php the_content();
             endwhile;
             endif; ?> 
         </div>
         <div class="cont" id="newsletter">
             <div class="footform">
-                <h2 class="hfooter"><span class="dotOrange">.</span>Newsletter</h2>
+                <h2 class="hfooter">Newsletter</h2>
 
                 <form action="http://dreamdesgn.us6.list-manage.com/subscribe/post?u=e70478803abc992d0692e8af1&amp;id=34bf400dd9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <label for="mce-EMAIL">
@@ -32,7 +32,7 @@
         </div>
 
         <div class="cont" id="extend">
-            <h2 class="hfooter"><span class="dotOrange">.</span>Last Tweet</h2>
+            <h2 class="hfooter">Last Tweet</h2>
 
                     <div class="tweetfeed">
 

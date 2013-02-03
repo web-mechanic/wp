@@ -13,13 +13,14 @@
           </header>               
         <div class="contentart">          
           <section class="hereisthearticle">
-             <?php the_post_thumbnail('featured'); ?>
+             <?php the_post_thumbnail('workimg'); ?>
               <div class="txtart"><?php the_content(); ?></div>
           </section>
         </div>
         <footer class="singleblogart">
           <div class="moresec">
             <a class="readMore" href="http://ptfwp.dreamdesgn.com/blog/">Back to Full List</a>
+              <a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php echo urlencode(get_the_title($id)); ?>" title="Share this post on Facebook">Share on Facebook</a> 
               <div class="commentSpace">
                 <?php comments_template();?>
               </div>

@@ -2057,7 +2057,7 @@ position:latLng,
   map.setMapTypeId('map_style');
   marker.setMap(map);
  	google.maps.event.trigger(map,"resize");
-	map.setCenter(cent);
+	map.setCenter(latLng);
 };
 
 $(function() {
@@ -2068,8 +2068,8 @@ $(function() {
     // Specify what the errors should look like
     // when they are dynamically added to the form
 
-    errorElement: "p",
-    wrapper: "span",
+    errorElement: "span",
+    wrapper: "",
     
     errorPlacement: function(error, element) {
     	$('.error').parent('span').remove();
@@ -2081,7 +2081,7 @@ $(function() {
     rules: {
       name: {
         required: true,
-        minlength: 3
+        minlength: 2
       },
       email: {
         required: true,
@@ -2098,18 +2098,18 @@ $(function() {
     messages: {
       name: {
       	
-        required: "Please enter your name.",
-        minlength: jQuery.format("At least {0} characters required.")
+        required: "Entrez votre nom.",
+        minlength: jQuery.format("Entrez au minimum 2 caratères.")
       },
       email: {
       	
-        required: "Please enter your email.",
-        email: "Please enter a valid email."
+        required: "Entrez votre e-mail.",
+        email: "Entrez une adresse E-mail valide."
       },
       message: {
       	
-        required: "Please enter a message.",
-        minlength: jQuery.format("At least {0} characters required.")
+        required: "Entrez un message.",
+        minlength: jQuery.format("Entrez un message d'au moins 10 caractères.")
       }
     },
  

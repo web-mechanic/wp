@@ -1,6 +1,5 @@
 <?php
- 
-// Clean up the input values
+
 foreach($_POST as $key => $value) {
   if(ini_get('magic_quotes_gpc'))
     $_POST[$key] = stripslashes($_POST[$key]);
@@ -8,12 +7,11 @@ foreach($_POST as $key => $value) {
   $_POST[$key] = htmlspecialchars(strip_tags($_POST[$key]));
 }
  
-// Assign the input values to variables for easy reference
 $name = $_POST["name"];
 $email = $_POST["email"];
 $message = $_POST["message"];
  
-// Test input values for errors
+
 $errors = array();
 if(strlen($name) < 2) {
   if(!$name) {
@@ -36,27 +34,23 @@ if(strlen($message) < 10) {
 }
  
 if($errors) {
-  // Output errors and die with a failure message
+
   $errortext = "";
   foreach($errors as $error) {
     $errortext .= "<li>".$error."</li>";
   }
   die("<span class='failure'>The following errors occured:<ul>". $errortext ."</ul></span>");
 }
- 
-// Send the email
+
 $to = "th.lissens@gmail.com";
 $subject = "Contact Form: $name";
 $message = "$message";
 $headers = "From: $email";
  
 mail($to, $subject, $message, $headers);
- 
-// Die with a success message
+
 die("<span class='success'>Maintenant c'est fait&nbsp;! A très bientôt.</span>");
- 
-// A function that checks to see if
-// an email is valid
+
 function validEmail($email)
 {
    $isValid = true;
@@ -73,39 +67,38 @@ function validEmail($email)
       $domainLen = strlen($domain);
       if ($localLen < 1 || $localLen > 64)
       {
-         // local part length exceeded
+
          $isValid = false;
       }
       else if ($domainLen < 1 || $domainLen > 255)
       {
-         // domain part length exceeded
+
          $isValid = false;
       }
       else if ($local[0] == '.' || $local[$localLen-1] == '.')
       {
-         // local part starts or ends with '.'
+
          $isValid = false;
       }
       else if (preg_match('/\\.\\./', $local))
       {
-         // local part has two consecutive dots
+
          $isValid = false;
       }
       else if (!preg_match('/^[A-Za-z0-9\\-\\.]+$/', $domain))
       {
-         // character not valid in domain part
+
          $isValid = false;
       }
       else if (preg_match('/\\.\\./', $domain))
       {
-         // domain part has two consecutive dots
+
          $isValid = false;
       }
       else if(!preg_match('/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/',
                  str_replace("\\\\","",$local)))
       {
-         // character not valid in local part unless
-         // local part is quoted
+
          if (!preg_match('/^"(\\\\"|[^"])+"$/',
              str_replace("\\\\","",$local)))
          {
@@ -114,7 +107,7 @@ function validEmail($email)
       }
       if ($isValid && !(checkdnsrr($domain,"MX") || checkdnsrr($domain,"A")))
       {
-         // domain not found in DNS
+
          $isValid = false;
       }
    }

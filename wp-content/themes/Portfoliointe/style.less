@@ -68,19 +68,19 @@ margin-top: 0.3em;
         display: inline;
         font-weight: 700;    
         font-family: "rockwell","Arvo", serif;
-        font-size: 1.55em;
+        font-size: 1.55em;        
+    }
+}
 
-        a{
-            text-decoration: none;
-            color: rgb(229, 229, 229);
-            margin-right:2.33em;
-            padding: 0.5em;
+.first a{
+    text-decoration: none;
+    color: rgb(229, 229, 229);
+    margin-right:2.33em;
+    padding: 0.5em;
 
-            &:hover{
-                background-color: #f15a24;
-                color: white;
-            }
-        }
+    &:hover{
+        background-color: #f15a24;
+        color: white;
     }
 }
 
@@ -617,24 +617,24 @@ font-size: 1.04em;
 /*nav alternative*/
 .altnav ul{
     padding-left: 0;
-    margin-top: -0.45em;
+    margin-top: -0.45em;        
+    }
 
-    li{
-        font-weight: 700;    
-        font-family: "rockwell","Arvo", serif;
-        font-size: 1.5em;
-        line-height: 1.6em; 
+.altnav li{
+    font-weight: 700;    
+    font-family: "rockwell","Arvo", serif;
+    font-size: 1.5em;
+    line-height: 1.6em; 
+}
 
-        a{
-            text-decoration: none;
-            color: rgb(229, 229, 229);
+.altnav a{
+    text-decoration: none;
+    color: rgb(229, 229, 229);
 
-        &:hover{
+            &:hover{
             border-bottom: 1px dashed;
             border-color: rgb(241, 90, 36);
             }
-        }
-    }
 }
 
 .vcard{
@@ -864,7 +864,7 @@ color: #707070;
     border-radius:5px;
         padding:0.5em;
     font-family: 'Open Sans', sans-serif;
-     color: #E5E5E5;
+     color: black;
      display: block;
     width: 16em;
     height: 1.5em;
@@ -962,10 +962,6 @@ border-radius: 10px;
     }
 
 
-.articles footer{
-    height:5em;
-    border-bottom: 1px dashed #F15A24;
-}
 
 .artinfo{
     font-family: 'Helvetica LT', 'Open Sans', sans-serif;
@@ -985,6 +981,10 @@ border-radius: 10px;
     padding-top:1em;
     height:100%;
     width:35em;
+}
+
+.cont span{
+    color:#E5E5E5;
 }
 
 .contentart img{
@@ -1072,6 +1072,10 @@ font-size: 0.8em;
 }
 .singleblogart{
     margin-bottom:4.5em;
+
+    .moresec{
+        margin-top: 0;
+    }
 }
 
 .sendingbut{
@@ -1302,13 +1306,13 @@ margin-top: 3em;
 
         li{
         display:block;
-        margin-bottom: 0.5em;
-
-        a{
-        margin:0;
-        padding: 0;
-    }    
+        margin-bottom: 0.5em;  
     }
+}
+
+.first a{
+    margin:0;
+    padding: 0;
 }
 
 .accroche{
@@ -1363,7 +1367,7 @@ margin-top: 3em;
 
     img{
         width:100%;
-        height:;
+        height:auto;
     }
 
     .txtart{
@@ -1383,7 +1387,7 @@ margin-top: 3em;
 }
 
 .footwrap{
-    height:45em;
+    height: 52em;
     padding: 0em;
 }
 
@@ -1447,9 +1451,10 @@ margin-top: 3em;
         margin-top: 1em;
     }
 
-    li{
-        margin-right:  0;
-    }
+}
+
+.first li{
+   margin-right:  0; 
 }
 
 #jflowperso{
@@ -1513,6 +1518,22 @@ width: 100%;
 margin-bottom: 1.5em;
 }
 
+.commentSpace .comment {
+margin-bottom: 2em;
+}
+
+.commentSpace .readMore {
+float: right;
+}
+
+.blogContentwrap {
+width: 95%;
+}
+
+.contentart img {
+width: 95%;
+height: auto;
+}
 }
 /* Smartphones (landscape) ----------- */
 @media only screen
@@ -1593,7 +1614,26 @@ display: none;
 font-size: 1em;
 }
 
+.articles img {
+clear: both;
+margin: 1em 0 1em 0;
+width: 100%;
+height: auto;
+}
 
+.contentart img {
+width: 39%;
+height: auto;
+}
+
+.txtart{
+    clear: both;
+    width: 100%;
+}
+
+.artinfo{
+    margin-top: 0;
+}
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen
